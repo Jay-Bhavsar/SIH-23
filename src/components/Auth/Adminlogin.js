@@ -3,8 +3,8 @@ import "../Style/Login.css";
 import Navbar from "../Home/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../context/UserAuthContext";
-import Footer from "../Home/Footer";
-const logo = require("../img/logo.png");
+// import Footer from "../Home/Footer";
+
 function Adminlogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,20 +42,20 @@ function Adminlogin() {
 
       <center>
         <div className="bg-blue-600 w-[100%] shadow-xl md:w-[60%] text-white font-extrabold text-xl p-3">
-          <h2>AMRRI PORTAL NIA JAIPUR</h2>
+          <h2>PGRKAM</h2>
           <h2>Login to Apply</h2>
         </div>
         <div className="flex flex-col border-red-700 shadow-xl w-[100%] md:w-[60%] md:flex-row">
           {error && <div>{error}</div>}
           <div className="flex flex-col justify-center items-center w-[100%] md:w-[50%] p-4">
             <br />
-            <img src={logo} alt="" className="w-[100px] h-[100px]" />
+            {/* <img src={logo} alt="" className="w-[100px] h-[100px]" /> */}
             <br />
             <h1 className="text-xl font-bold">
-              National Institute of Ayurveda
+              PGRKAM
             </h1>
             <h4 className="">
-              Deemed to be University(De Novo) Ministry of AYUSH, Govt. of India
+            PUNJAB GHAR GHAR ROZGAR
             </h4>
           </div>
          
@@ -97,7 +97,7 @@ function Adminlogin() {
       </center>
       <br />
       <br />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

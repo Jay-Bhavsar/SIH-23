@@ -7,7 +7,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 import { Dropdown } from "flowbite-react";
-const logo = require("../img/logo.png");
+// const logo = require("../img/logo.png");
 const isUserLoggedIn = sessionStorage.getItem("isUserLoggedIn")
 
 const navigation = [
@@ -49,18 +49,7 @@ export default function Example() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-                  <div className="flex items-center flex-shrink-0">
-                    <img
-                      className="block w-auto h-20 lg:hidden"
-                      src={logo}
-                      alt="Your Company"
-                    />
-                    <img
-                      className="hidden w-auto h-20 lg:block"
-                      src={logo}
-                      alt="Your Company"
-                    />
-                  </div>
+                 
                   <div className="hidden mt-5 sm:ml-6 sm:block">
                     <div className="flex items-center justify-center space-x-4">
                       <div className="amr">

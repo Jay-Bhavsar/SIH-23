@@ -3,16 +3,16 @@ import firebase from "firebase/compat/app";
 import "firebase/firestore";
 import Navbar from "../Home/Adminnavbar";
 import { Button, Modal } from "flowbite-react";
-import Footer from "../Home/Footer";
+// import Footer from "../Home/Footer";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDXg6bof6EXM7TNfQjIQxYgKdR63SjURtE",
-  authDomain: "amrri-cdeb4.firebaseapp.com",
-  projectId: "amrri-cdeb4",
-  storageBucket: "amrri-cdeb4.appspot.com",
-  messagingSenderId: "739660662641",
-  appId: "1:739660662641:web:5dc201b3c017dd80ccd8d0",
-  measurementId: "G-0BT7XZRL7E",
+  apiKey: "AIzaSyBTRJUcTOjuTlPjo4BlBqUTOvJM2Y1-PMw",
+  authDomain: "pgrkam-683e5.firebaseapp.com",
+  projectId: "pgrkam-683e5",
+  storageBucket: "pgrkam-683e5.appspot.com",
+  messagingSenderId: "339913483137",
+  appId: "1:339913483137:web:74c6ca174dcfb43f903e80",
+  measurementId: "G-N8G48H9MRG"
 };
 
 // firebase.initializeApp(firebaseConfig);
@@ -212,7 +212,7 @@ function Admin() {
           )}
         </center>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

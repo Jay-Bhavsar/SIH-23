@@ -4,9 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Home/Navbar";
 
 import { useUserAuth } from "../../context/UserAuthContext";
-import Footer from "../Home/Footer";
-import SecurityCode from "./SecurityCode";
-const logo = require("../img/logo.png");
+// import Footer from "../Home/Footer";
+// import SecurityCode from "./SecurityCode";
+// const punjab = require("../img/punjab.png");
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -62,21 +62,21 @@ function Signup() {
       {error && <div>{error}</div>}
       <center>
         <div className="bg-blue-600 w-[100%] shadow-xl md:w-[40%] text-white font-extrabold text-xl p-3">
-          <h2>AMRRI PORTAL NIA JAIPUR</h2>
-          <h2>Registration for Portal</h2>
+          <h2>PGRKAM</h2>
+          <h2>Registration for Jobs</h2>
         </div>
 
         <div className="flex flex-col shadow-xl w-[100%] md:w-[40%] form">
           <center>
           <div className="flex flex-col justify-center items-center w-[100%] md:w-[50%] p-4">
             <br />
-            <img src={logo} alt="" className="w-[100px] h-[100px]" />
+            {/* <img src={punjab} alt="" className="w-[100px] h-[100px]" /> */}
             <br />
             <h1 className="text-xl font-bold">
-              National Institute of Ayurveda
+            PGRKAM
             </h1>
             <h4 className="">
-              Deemed to be University(De Novo) Ministry of AYUSH, Govt. of India
+            PUNJAB GHAR GHAR ROZGAR
             </h4>
           </div>
           </center>
@@ -214,7 +214,7 @@ function Signup() {
       </center>
       <br />
       <br />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

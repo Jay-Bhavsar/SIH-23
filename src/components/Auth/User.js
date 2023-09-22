@@ -3,8 +3,8 @@ import Navbar from "../../components/Home/userNavbar";
 import firebase from "firebase/compat/app";
 import "firebase/firestore";
 import { Link } from "react-router-dom";
-import Footer from "../Home/Footer";
-import DefaultSidebar from "../Home/Sidebar";
+// import Footer from "../Home/Footer";
+// import DefaultSidebar from "../Home/Sidebar";
 
 import { db } from "../../firebase";
 
@@ -96,51 +96,12 @@ function User() {
   return (
     <>
       <Navbar />
-      <br /> <br />
-      <br />
-      <br />
-      <div className="flex flex-row justify-center">
-       
-        <br />
-        <br />
-        <div className=" w-[100%] md:w-[50%]">
-          <center>
-            <Link to="/form">
-              <button className="p-2 mt-8 text-white bg-blue-500 rounded-md">
-                Click here to fill out the AMMRI Form
-              </button>
-            </Link>
-          </center>
+      <br /><br /><br /><br /><br />
+      <center>
+      <div>Welcome to PGRKAM</div>
 
-          <br />
-
-          <div className="p-4 font-bold text-white bg-blue-500 w-[100%] text-lg">
-            <div className="flex flex-row justify-between">
-              <p>Total Researches</p>
-              <p>
-                {reviewres.length + rejectedres.length + approvedres.length}
-              </p>
-            </div>
-            <br />
-            <div className="flex flex-row justify-between">
-              <p>Under Review Stage</p>
-              <p>{reviewres.length}</p>
-            </div>
-            <br />
-            <div className="flex flex-row justify-between">
-              <p>Registered Researches</p>
-              <p> {approvedres.length}</p>
-            </div>
-            <br />
-            <div className="flex flex-row justify-between">
-              <p>Terminated/Suspended Researches</p>
-              <p> {rejectedres.length}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <Footer />
+      </center>
+      {/* <Footer /> */}
     </>
   );
 }

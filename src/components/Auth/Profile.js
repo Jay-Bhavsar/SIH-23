@@ -82,9 +82,7 @@ function Profile() {
       <br />
       <br />
       <br />
-      <div className="text-center oneliner">
-        <h1>Ayurveda Manuscripts Research Registry of India (AMRRI)</h1>
-      </div>
+    
       <div>
         <center>
           <h2 className="mt-6 mb-6 text-xl font-bold">User Profile</h2>

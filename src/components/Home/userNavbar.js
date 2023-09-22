@@ -6,19 +6,11 @@ import "../Style/Home.css";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { Avatar, Dropdown } from "flowbite-react";
-const logo = require("../img/logo.png");
+// const logo = require("../img/logo.png");
 const isUserLoggedIn = sessionStorage.getItem("isUserLoggedIn");
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  // { name: "Fill out the AMRRI form", href: "/form", current: false },
-  { name: "Published Research", href: "/published", current: false },
-  { name: "Reasearch in Review", href: "/review", current: false },
-  { name: "Rejected Researches", href: "/rejected", current: false },
-  { name: "Portal", href: "/user", current: false },
-  // { name: "Update Profile", href: "/profile", current: false },
-  // { name: isUserLoggedIn ? "Logout" : "Login", href: isUserLoggedIn ? "/logout": "/login", current: false },
-  // { name: "logout", href: "/logout" },
 ];
 
 function classNames(...classes) {
@@ -48,7 +40,7 @@ export default function Example() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-                  <div className="flex items-center flex-shrink-0">
+                  {/* <div className="flex items-center flex-shrink-0">
                     <img
                       className="block w-auto h-20 lg:hidden"
                       src={logo}
@@ -59,11 +51,11 @@ export default function Example() {
                       src={logo}
                       alt="Your Company"
                     />
-                  </div>
+                  </div> */}
                   <div className="hidden mt-5 sm:ml-6 sm:block">
                     <div className="flex items-center justify-around space-x-4">
                       <div className="amr">
-                        <h1>AMRRI</h1>
+                        <h1>PGRKAM</h1>
                       </div>
                       {navigation.map((item) => (
                         <Link
@@ -88,9 +80,9 @@ export default function Example() {
                       label={<Avatar alt="User settings" rounded />}
                     >
                       <div className="pl-4 pr-4">
-                        <a href="/profile">
+                        {/* <a href="/profile">
                           <div className="m-2 text-base">Update Profile</div>
-                        </a>
+                        </a> */}
 
                         <a href="/logout" className="mt-20">
                           <div className="m-2 text-base">Logout</div>

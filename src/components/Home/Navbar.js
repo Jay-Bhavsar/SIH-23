@@ -3,20 +3,13 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import "../Style/Home.css";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-const logo = require("../img/logo.png");
+// const logo = require("../img/logo.png");
 
 const isUserLoggedIn = sessionStorage.getItem("isUserLoggedIn");
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "About Us", href: "/vision", current: false },
  
-  { name: "Trial Search", href: "/trialsearch", current: false },
-  { name: "Advanced Search", href: "/advancesearch", current: false },
-  { name: "FAQ", href: "/faq", current: false },
-  { name: "Disclaimer", href: "/disclaimer", current: false },
-  { name: "Feedback", href: "/feedback", current: false },
-  { name: "Sitemap", href: "/sitemap", current: false },
   {
     name: isUserLoggedIn ? "Logout" : "Login",
     href: isUserLoggedIn ? "/logout" : "/login",
@@ -59,7 +52,7 @@ export default function Example() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-                  <div className="flex items-center flex-shrink-0">
+                  {/* <div className="flex items-center flex-shrink-0">
                     <img
                       className="block w-auto h-20 lg:hidden"
                       src={logo}
@@ -70,11 +63,11 @@ export default function Example() {
                       src={logo}
                       alt="Your Company"
                     />
-                  </div>
+                  </div> */}
                   <div className="hidden mt-5 sm:ml-6 sm:block">
                     <div className="flex items-center justify-center space-x-4">
                       <div className="amr">
-                        <h1>AMRRI</h1>
+                        <h1>PGRKAM</h1>
                       </div>
                       {navigation.map((item) => (
                         <Link
