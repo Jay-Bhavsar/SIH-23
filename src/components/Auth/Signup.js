@@ -4,9 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Home/Navbar";
 
 import { useUserAuth } from "../../context/UserAuthContext";
-// import Footer from "../Home/Footer";
-// import SecurityCode from "./SecurityCode";
-// const punjab = require("../img/punjab.png");
 
 function Signup() {
   const [email, setEmail] = useState("");
