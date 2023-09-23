@@ -12,7 +12,14 @@ import {
     VStack,
 } from '@chakra-ui/react';
 import React from 'react'
-
+import pic1 from '../Assets/img/1.svg'
+import pic2 from '../Assets/img/2.svg'
+import pic3 from '../Assets/img/3.svg'
+import pic4 from '../Assets/img/4.svg'
+import pic5 from '../Assets/img/5.svg'
+import pic6 from '../Assets/img/6.svg'
+import pic7 from '../Assets/img/7.svg'
+import pic8 from '../Assets/img/8.svg'
 const Calendar = () => {
     return (
         <><Box className='bgmaker'>
@@ -30,7 +37,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic1}
                             alt='Caffe Latte'
                         />
 
@@ -61,7 +68,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic2}
                             alt='Caffe Latte'
                         />
 
@@ -92,7 +99,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic3}
                             alt='Caffe Latte'
                         />
 
@@ -123,7 +130,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic4}
                             alt='Caffe Latte'
                         />
 
@@ -154,7 +161,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic5}
                             alt='Caffe Latte'
                         />
 
@@ -185,7 +192,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic6}
                             alt='Caffe Latte'
                         />
 
@@ -216,7 +223,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic7}
                             alt='Caffe Latte'
                         />
 
@@ -247,7 +254,7 @@ const Calendar = () => {
                         <Image
                             objectFit='cover'
                             maxW={{ base: '100%', sm: '200px' }}
-                            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+                            src={pic8}
                             alt='Caffe Latte'
                         />
 
@@ -268,6 +275,7 @@ const Calendar = () => {
                             </CardFooter>
                         </Stack>
                     </Card>
+                    
                     
                 </VStack>
             </HStack>

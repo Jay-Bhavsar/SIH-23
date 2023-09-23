@@ -1,96 +1,50 @@
-import {
-  Badge,
-  Box,
-  Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  CardFooter,
-  Divider,
-  Flex,
-  HStack,
-  Heading,
-  Image,
-  Tag,
-  TagLabel,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
-import React from 'react';
+import { Badge, Box, Button, ButtonGroup, Card, CardBody, CardFooter, Divider, Flex, HStack, Heading, Image, Stack, Tag, TagLabel, TagLeftIcon, Text, VStack } from '@chakra-ui/react';
+import React, {useEffect, useState} from 'react';
 import imag from '../Assets/img/log.svg';
-import {
-  AiOutlineHome,
-  AiOutlinePlayCircle,
-  AiOutlineCalendar,
-  AiFillCopy,
-} from 'react-icons/ai';
+import { AiOutlineHome, AiOutlinePlayCircle, AiOutlineCalendar, AiFillCopy, AiOutlinePlus } from 'react-icons/ai';
 import { BiPlusMedical } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+
 const Job = () => {
-  return (
-    <>
-      <Box
-        width={'100vw'}
-        minHeight={'100vh'}
-        display={'flex'}
-        flexDir={'column'}
-        // justifyContent={'center'}
-        alignItems={'center'}
-      >
-        <Heading
-          textAlign={'center'}
-          marginTop={'50px'}
-          fontFamily={'montserrat'}
-        >
-          Find your dream job now !!
-        </Heading>
-        <Text textAlign={'center'} fontFamily={'montserrat'}>
-          5 lakh+ jobs for you to explore
-        </Text>
-        <Link to={'/jobform'}>
-          <Button
-            textAlign={'center'}
-            size={'lg'}
-            colorScheme="orange"
-            variant={'outline'}
-            leftIcon={<BiPlusMedical fontWeight={'bolder'} />}
-            marginTop={'40px'}
-          >
-            Add a new Job
-          </Button>
-        </Link>
-        <Flex
-          width={'90%'}
-          margin={'auto'}
-          justifyContent={'space-evenly'}
-          flexWrap={'wrap'}
-          flexDir={'row'}
-        >
-          <Card
-            width="40%"
-            boxShadow={'0px 10px 61px 26px rgba(0,0,0,0.1)'}
-            margin={'20px'}
-          >
-            <CardBody>
-              <VStack>
-                <HStack justifyContent={'space-between'}>
-                  <Flex
-                    width={'70%'}
-                    justifyContent={'space-between'}
-                    flexDir={'column'}
-                  >
-                    <Text textAlign={'start'}>
-                      <Badge ml="1" colorScheme="green">
-                        Actively Hiring
-                      </Badge>
-                    </Text>
+  const [jobs, setJobs] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://sih23-backend.vercel.app/allJobs", {
+        method: 'GET',
+        headers : {'Content-type':'application/json; charset=UTF-8'}
+      }).then((resposne) => resposne.json())
+      .then((data) => {
+        setIsLoading(!isLoading);
+        setJobs([...data])
+        console.log(data);
+      })  
+      .catch((err) => {
+        console.log(err.message);
+      })
+
+    setIsLoading(false);
+  }, [])
+
+  const JobCard =(item, index) => {
+     
+    return (
+      <Card key = {index} width="40%" boxShadow={'0px 10px 61px 26px rgba(0,0,0,0.1)'} margin={'20px'}>
+        <CardBody>
+          <VStack>
+            <HStack justifyContent={'space-between'}>
+              <Flex width={'70%'} justifyContent={'space-between'} flexDir={'column'} >
+                <Text textAlign={'start'}>
+                 <Badge ml="1" colorScheme="green"> Actively Hiring </Badge>
+                </Text>
                     <Text
                       textAlign={'start'}
                       fontWeight={'bold'}
                       fontFamily={'roboto'}
                       fontSize={'20px'}
                     >
-                      Stock Marketing Management{' '}
+                      {item.item.jobName}
                       <Badge ml="1" colorScheme="green">
                         New
                       </Badge>
@@ -113,7 +67,7 @@ const Job = () => {
                   alignItems={'center'}
                 >
                   <AiOutlineHome />
-                  <Text fontFamily={'roboto'}>Jaipur, Rajasthan</Text>
+                  <Text fontFamily={'roboto'}>{item.item.location}</Text>
                 </Flex>
                 <Divider />
                 <HStack
@@ -133,7 +87,7 @@ const Job = () => {
                       </Text>
                     </Flex>
                     <Text fontFamily={'roboto'} textTransform={'uppercase'}>
-                      Immediately
+                      {item.item.lastDate}
                     </Text>
                   </VStack>
                   <VStack>
@@ -163,7 +117,7 @@ const Job = () => {
                       </Text>
                     </Flex>
                     <Text textTransform={'uppercase'} fontFamily={'roboto'}>
-                      1000rs-2000rs/month
+                      {item.item.salRange + " /month"}
                     </Text>
                   </VStack>
                 </HStack>
@@ -213,6 +167,51 @@ const Job = () => {
               </ButtonGroup>
             </CardFooter>
           </Card>
+    )
+  }
+
+  return (
+    <>
+      <Box
+        width={'100vw'}
+        minHeight={'100vh'}
+        display={'flex'}
+        flexDir={'column'}
+        // justifyContent={'center'}
+        alignItems={'center'}
+      >
+        <Heading
+          textAlign={'center'}
+          marginTop={'50px'}
+          fontFamily={'montserrat'}
+        >
+          Find your dream job now !!
+        </Heading>
+        <Text textAlign={'center'} fontFamily={'montserrat'}>
+          5 lakh+ jobs for you to explore
+        </Text>
+        <Link to={'/jobform'}>
+          <Button
+            textAlign={'center'}
+            size={'lg'}
+            colorScheme="orange"
+            variant={'solid'}
+            leftIcon={<BiPlusMedical fontWeight={'bolder'} />}
+            marginTop={'40px'}
+          >
+            Add a new Job
+          </Button>
+        </Link>
+        <Flex
+          width={'90%'}
+          margin={'auto'}
+          justifyContent={'space-evenly'}
+          flexWrap={'wrap'}
+          flexDir={'row'}
+        >
+        {jobs.map((item, index) =>  <JobCard item = {item} index = {index}/>)
+        }
+          
         </Flex>
       </Box>
     </>

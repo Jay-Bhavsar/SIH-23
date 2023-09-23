@@ -16,7 +16,7 @@ import {
   VStack,
   useSteps,
 } from '@chakra-ui/react';
-import punjab from '../Assets/img/punjabi.png';
+import punjab from '../Assets/img/Bg Process.svg';
 const Process = () => {
   const steps = [
     { title: 'First', description: 'Register' },
