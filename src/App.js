@@ -22,7 +22,7 @@ import Contact from "./components/Contact/Contact";
 import Courses from "./components/Courses/Courses";
 import Job from "./components/Jobs/Job";
 import JobsForm from "./components/Jobs/JobsForm";
-import Calendar from "./components/Home/Calendar";
+import Calendar from "./components/Events/Calendar";
 import OurMission from "./components/OurMission/OurMission";
 
 function App() {
