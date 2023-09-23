@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-import "./App.css";
 import Login from "./components/Auth/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Signup from "./components/Auth/Signup";
+
 import { UserAuthContextProvider } from "./context/UserAuthContext";
-import Home from "./components/Home/Home";
+import "./components/Styles/Layout.css"
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import User from "./components/Auth/User";
 import Profile from "./components/Auth/Profile";
@@ -17,6 +18,8 @@ import LandingPage from "./components/Home/LandingPage";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 
+import ARComponent from "./components/Jobs/ArComponent"
+
 function App() {
   return (
     <>
@@ -26,6 +29,9 @@ function App() {
             <Header />
             <Routes>
               <Route exact path="/login" element={<Login />} />
+
+              <Route element={<ARComponent />} exact path="/ar" />
+
               <Route path="/" element={<LandingPage />} />
               <Route
                 path="/user"
@@ -35,6 +41,34 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+
+
+              <Route
+                path="/adminallresearch"
+                element={
+                  <AdminProtectedRoute>
+                    <Admin />
+                  </AdminProtectedRoute>
+                }
+              />
+
+              <Route path="/adminlogin" element={<Adminlogin />} />
+
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <Profile />
+                  </ProtectedRoute>
+                }
+              ></Route>
+
+              <Route path="/logout" element={<Logout />}></Route>
+
+              <Route path="/forgetpass" element={<ForgotPassword />} />
+            </Routes>
+            <Footer />
+
 
               <Route
                 path="/adminallresearch"
@@ -63,6 +97,7 @@ function App() {
               <Route path="/forgetpass" element={<ForgotPassword />} />
             </Routes>
             <Footer/>
+
           </Router>
         </UserAuthContextProvider>
       </div>
