@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/firestore";
-import Navbar from "../Home/Adminnavbar";
 import { Button, Modal } from "flowbite-react";
 // import Footer from "../Home/Footer";
 
@@ -100,7 +99,7 @@ function Admin() {
   };
   return (
     <>
-      <Navbar />
+    
       <br />
       <br />
       <br />

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../../components/Home/userNavbar";
 import firebase from "firebase/compat/app";
 import "firebase/firestore";
 import { Link } from "react-router-dom";
@@ -95,7 +94,7 @@ function User() {
 
   return (
     <>
-      <Navbar />
+      
       <br /><br /><br /><br /><br />
       <center>
       <div>Welcome to PGRKAM</div>

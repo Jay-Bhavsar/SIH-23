@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import firebase from "firebase/compat/app";
-import "../Style/Login.css";
 import "firebase/compat/auth";
-import Navbar from "../Home/Navbar";
+// import Navbar from "../Home/Navbar";
 
 // Initialize Firebase with your project config
 const firebaseConfig = {
@@ -35,7 +34,7 @@ const ForgotPassword = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <br />
       <br />

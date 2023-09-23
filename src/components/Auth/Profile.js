@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 import "firebase/firestore";
-import Navbar from "../Home/userNavbar";
+
 
 
 
@@ -77,7 +77,7 @@ function Profile() {
 
   return (
     <>
-      <Navbar />
+      
       <br />
       <br />
       <br />

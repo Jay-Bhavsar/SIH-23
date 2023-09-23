@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "../Style/Login.css";
-import Navbar from "../Home/Navbar";
+// import Navbar from "../Home/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../context/UserAuthContext";
 // import Footer from "../Home/Footer";
@@ -31,7 +30,7 @@ function Adminlogin() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <br />
       <br />
       <br />
