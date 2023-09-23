@@ -58,19 +58,19 @@ const Header = () => {
               <Link onClick={onClose} to="/">
                 <Button leftIcon={<FaHome/>} variant="ghost">Home</Button>
               </Link>
-              <Link onClick={onClose} to="/data">
+              <Link onClick={onClose} to="/jobs">
                 <Button leftIcon={<BsBriefcaseFill/>} variant="ghost">Jobs</Button>
               </Link>
-              <Link onClick={onClose} to="/request">
+              <Link onClick={onClose} to="/courses">
                 <Button leftIcon={<FaLaptopCode/>} variant="ghost">Courses</Button>
               </Link>
-              <Link onClick={onClose} to="/contact">
+              <Link onClick={onClose} to="/events">
                 <Button leftIcon={<GiBarracksTent/>} variant="ghost">Events</Button>
               </Link>
-              <Link onClick={onClose} to="/about">
+              <Link onClick={onClose} to="/contact">
                 <Button leftIcon={<RiContactsFill/>} variant="ghost">Contact Us</Button>
               </Link>
-              <Link onClick={onClose} to="/about">
+              <Link onClick={onClose} to="/mission">
                 <Button leftIcon={<GiOnTarget/>} variant="ghost">Our Mission</Button>
               </Link>
               <HStack

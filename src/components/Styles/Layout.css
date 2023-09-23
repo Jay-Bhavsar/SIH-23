@@ -72,3 +72,24 @@
     padding: '10px';
     box-shadow: '0 0 10px 0 orange';
 }
+.userReg {
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .userReg::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: #FF7722; */
+    /* background-color: blue; */
+    background-image: linear-gradient(to bottom, #ff9933, #c9663c, #883f38, #452226, #000000);
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 0, 35% 0, 35% 100%, 100% 100%, 100% 100%, 48% 100%, 0 100%, 0 0);
+  }
+  
