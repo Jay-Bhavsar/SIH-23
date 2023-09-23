@@ -10,11 +10,36 @@ import image2 from "../Assets/img/register.svg";
 // import Footer from "../Home/Footer";
 
 const Login = () => {
+  const [firstname, setFirstname] = useState("");
+  const [mobNo, setmobNo] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState({ error: false, msg: "" });
   const [error, setError] = useState();
+  const { signUp } = useUserAuth();
   const { login } = useUserAuth();
   const navigate = useNavigate();
+  const handleSubmit2 = async (e) => {
+    e.preventDefault();
+    alert("You have Signed In");
+    setError("");
+    setMessage("");
+
+    const newUser = {
+      firstname,
+      email,
+      mobNo,
+      role: "user",
+    };
+    console.log(newUser);
+
+    try {
+      await signUp(email, password, newUser);
+      navigate("/login");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -66,11 +91,16 @@ const Login = () => {
               className="inputarea btn solid"
             />
           </form>
-          <form action="#" className="sign-up-form">
+          <form action=""
+            onSubmit={handleSubmit2} className="sign-up-form">
             <h2 className="title">Register</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>
-              <input className="inputarea" type="text" placeholder="Name" />
+              <input className="inputarea" type="text" placeholder="Name" 
+                onChange={(e) => {
+                  setFirstname(e.target.value);
+                }}
+              />
             </div>
             <div className="input-field">
               <i className="fas fa-envelope"></i>
@@ -78,6 +108,9 @@ const Login = () => {
                 className="inputarea"
                 type="email"
                 placeholder="Email Id"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
             </div>
             <div className="input-field">
@@ -86,6 +119,9 @@ const Login = () => {
                 className="inputarea"
                 type="text"
                 placeholder="Phone Number"
+                onChange={(e) => {
+                  setmobNo(e.target.value);
+                }}
               />
             </div>
             <div className="input-field">
@@ -94,16 +130,19 @@ const Login = () => {
                 className="inputarea"
                 type="password"
                 placeholder="Password"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
               />
             </div>
-            <div className="input-field">
+            {/* <div className="input-field">
               <i className="fas fa-key"></i>
               <input
                 className="inputarea"
                 type="password"
                 placeholder="Re-Enter Password"
               />
-            </div>
+            </div> */}
             <input type="submit" className=" btn" value="Sign up" />
           </form>
         </div>

@@ -7,7 +7,7 @@ import {
     Text,
     Divider
 } from '@chakra-ui/react';
-import govtLogo from '../../Assets/Logos/pgrkam.png'
+import govtLogo from '../Assets/Logos/pgrkam.png'
 const Footer = () => {
     return (
         <>

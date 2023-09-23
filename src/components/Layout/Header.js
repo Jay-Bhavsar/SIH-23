@@ -18,7 +18,7 @@ import { BsBriefcaseFill} from 'react-icons/bs';
 import { GiBarracksTent,GiOnTarget} from 'react-icons/gi';
 import { RiContactsFill} from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import navlogo from '../../Assets/Logos/logo.png'
+import navlogo from '../Assets/Logos/logo.png'
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isAuthenticated = false;
