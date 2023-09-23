@@ -15,7 +15,7 @@ import AdminProtectedRoute from "./components/Auth/AdminProtected";
 import LandingPage from "./components/Home/LandingPage";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
-// import ARComponent from "./components/Jobs/ArComponent"
+import ARComponent from "./components/Jobs/ArComponent"
 function App() {
   return (
     <>
@@ -25,7 +25,7 @@ function App() {
             <Header />
             <Routes>
               <Route exact path="/login" element={<Login />} />
-              {/* <Route element={<ARComponent />} exact path="/ar" /> */}
+              <Route element={<ARComponent />} exact path="/ar" />
               <Route path="/" element={<LandingPage />} />
               <Route
                 path="/user"
