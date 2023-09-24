@@ -94,51 +94,42 @@ const BeforeUser = () => {
                 onSubmit={handleSubmit2}
                 className="flex justify-start w-[90%] md:w-[100%]"
               >
-                <label className="w-[100%]">
-                  Email
-                  <input
+                  <Input
                     type="email"
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
                     className="w-[90%]"
                     required
+                    placeholder="Enter your email Address" marginTop={'20px'} size={'lg'}
                   />
-                </label>
 
-                <label className="w-[100%]">
-                  Password:
-                  <input
+                  <Input
                     type="password"
                     onChange={(e) => {
                       setPassword(e.target.value);
                     }}
                     className="w-[90%]"
                     required
+                    placeholder="Enter your Password" marginTop={'20px'} size={'lg'}
                   />
-                </label>
 
                 {/* Step 2: Add Confirm Password field */}
-                <label className="w-[100%]">
-                  Confirm Password:
-                  <input
+                  <Input
                     type="password"
                     onChange={(e) => {
                       setConfirmPassword(e.target.value);
                     }}
                     className="w-[90%]"
                     required
+                    placeholder="Confirm Password" marginTop={'20px'} size={'lg'}
                   />
-                </label>
-
                 {/* Display an error message if passwords do not match */}
                 {error && (
                   <p style={{ color: "red" }}>{error}</p>
                 )}
 
-                <center>
-                  <button className="button w-[90%]">Sign Up</button>
-                </center>
+                  <Button variant={'solid'} colorScheme="orange" marginTop={'20px'} size={'lg'}>Sign Up</Button>
               </form>
             </Stack>
           </VStack>
