@@ -27,7 +27,7 @@ export function UserAuthContextProvider({ children }) {
     console.log("Email", email);
     return signInWithEmailAndPassword(auth, email, password)
     .then((userCreds) => {
-      alert("Welcome to AMRRI")
+      alert("Welcome to PGRKAM")
     });
   }
   function logOut() {

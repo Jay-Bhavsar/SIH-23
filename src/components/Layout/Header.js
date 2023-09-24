@@ -11,24 +11,32 @@ import {
   useDisclosure,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill } from 'react-icons/ri';
-import { FaHome,FaLaptopCode} from 'react-icons/fa';
-import { BsBriefcaseFill} from 'react-icons/bs';
-import { GiBarracksTent,GiOnTarget} from 'react-icons/gi';
-import { RiContactsFill} from 'react-icons/ri';
+import { FaHome, FaLaptopCode } from 'react-icons/fa';
+import { BsBriefcaseFill } from 'react-icons/bs';
+import { GiBarracksTent, GiOnTarget } from 'react-icons/gi';
+import { RiContactsFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import navlogo from '../Assets/Logos/logo.png'
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const isAuthenticated = false;
-  const user={
-    role:"admin"
+  const [sessionVariable, setSessionVariable] = useState(false);
+  useEffect(() => {
+    const storedSessionVariable = sessionStorage.getItem('isUserLoggedIn');
+    if (storedSessionVariable) {
+      setSessionVariable(storedSessionVariable);
+    }
+  }, []);
+  const user = {
+    role: "admin"
   }
-  const logOutHandler=()=>{
+  const logOutHandler = () => {
     console.log('Logout');
     onClose();
   }
+
+
   return (
     <>
       <Button
@@ -48,30 +56,30 @@ const Header = () => {
         <DrawerOverlay backdropFilter={'blur(10px)'} />
         <DrawerContent>
           <DrawerHeader borderBottomWidth={'2px'} letterSpacing={'2px'}>
-          <HStack>
-            <Image src={navlogo}/>
-            <Text> PUNJAB GHAR GHAR ROZGAR</Text>
-          </HStack>
+            <HStack>
+              <Image src={navlogo} />
+              <Text> PUNJAB GHAR GHAR ROZGAR</Text>
+            </HStack>
           </DrawerHeader>
           <DrawerBody>
             <VStack spacing={'6'} alignItems="flex-start">
               <Link onClick={onClose} to="/">
-                <Button leftIcon={<FaHome/>} variant="ghost">Home</Button>
+                <Button leftIcon={<FaHome />} variant="ghost">Home</Button>
               </Link>
-              <Link onClick={onClose} to="/data">
-                <Button leftIcon={<BsBriefcaseFill/>} variant="ghost">Jobs</Button>
+              <Link onClick={onClose} to="/jobs">
+                <Button leftIcon={<BsBriefcaseFill />} variant="ghost">Jobs</Button>
               </Link>
-              <Link onClick={onClose} to="/request">
-                <Button leftIcon={<FaLaptopCode/>} variant="ghost">Courses</Button>
+              <Link onClick={onClose} to="/courses">
+                <Button leftIcon={<FaLaptopCode />} variant="ghost">Courses</Button>
+              </Link>
+              <Link onClick={onClose} to="/events">
+                <Button leftIcon={<GiBarracksTent />} variant="ghost">Events</Button>
               </Link>
               <Link onClick={onClose} to="/contact">
-                <Button leftIcon={<GiBarracksTent/>} variant="ghost">Events</Button>
+                <Button leftIcon={<RiContactsFill />} variant="ghost">Contact Us</Button>
               </Link>
-              <Link onClick={onClose} to="/about">
-                <Button leftIcon={<RiContactsFill/>} variant="ghost">Contact Us</Button>
-              </Link>
-              <Link onClick={onClose} to="/about">
-                <Button leftIcon={<GiOnTarget/>} variant="ghost">Our Mission</Button>
+              <Link onClick={onClose} to="/mission">
+                <Button leftIcon={<GiOnTarget />} variant="ghost">Our Mission</Button>
               </Link>
               <HStack
                 justifyContent={'space-evenly'}
@@ -79,7 +87,7 @@ const Header = () => {
                 bottom={'2rem'}
                 width="80%"
               >
-                {isAuthenticated ? (
+                {sessionVariable ? (
                   <>
                     <VStack>
                       <HStack>
@@ -87,14 +95,14 @@ const Header = () => {
                           <Button variant={'ghost'} colorScheme={'orange'}>Profile</Button>
                         </Link>
                         <Button variant={'ghost'} colorScheme={'orange'} onClick={logOutHandler}>
-                            <RiLogoutBoxLine/>
-                            Logout
+                          <RiLogoutBoxLine />
+                          Logout
                         </Button>
                       </HStack>
-                      {user && user.role==='admin' && (
+                      {user && user.role === 'admin' && (
                         <Link onClick={onClose} to="/admin/dashboard">
                           <Button colorScheme={'purple'} variant='ghost' >
-                            <RiDashboardFill style={{margin:'4px'}}/>
+                            <RiDashboardFill style={{ margin: '4px' }} />
                             DashBoard
                           </Button>
                           {/* <Button variant={'ghost'} colorScheme={'yellow'}>Profile</Button> */}
