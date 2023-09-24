@@ -40,6 +40,7 @@ function App() {
             <Routes>
               <Route exact path="/login" element={<Login />} />
               <Route element={<ARComponent />} exact path="/ar" />
+
               <Route path="/" element={<LandingPage />} />
               <Route exact path="/contact" element={<Contact />} />
               <Route exact path="/courses" element={<Courses />} />
@@ -54,7 +55,9 @@ function App() {
               <Route exact path="/authorg" element={<BeforeOrg />} />
               <Route exact path="/profile" element={<Profile />} />
 
-              <Route path="/user" element={
+              <Route
+                path="/user"
+                element={
                   <ProtectedRoute>
                     <User />
                   </ProtectedRoute>
