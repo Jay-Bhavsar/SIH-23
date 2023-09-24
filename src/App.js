@@ -24,6 +24,9 @@ import Job from "./components/Jobs/Job";
 import JobsForm from "./components/Jobs/JobsForm";
 import Calendar from "./components/Events/Calendar";
 import OurMission from "./components/OurMission/OurMission";
+import UserReg from "./components/LoginLogout/UserReg";
+import OrgReg from "./components/LoginLogout/OrgReg";
+import AddCourses from "./components/Courses/AddCourses";
 
 function App() {
   return (
@@ -42,6 +45,9 @@ function App() {
               <Route exact path="/jobform" element={<JobsForm />} />
               <Route exact path="/events" element={<Calendar />} />
               <Route exact path="/mission" element={<OurMission />} />
+              <Route exact path="/reguser" element={<UserReg />} />
+              <Route exact path="/regorg" element={<OrgReg />} />
+              <Route exact path="/addcourse" element={<AddCourses />} />
 
               <Route path="/user" element={
                   <ProtectedRoute>

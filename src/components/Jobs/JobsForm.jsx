@@ -84,15 +84,8 @@ const JobsForm = () => {
                   textAlign={"center"}
                 ></Text>
               </VStack>
-              <VStack width={"70%"}>
-                <Heading
-                  marginBottom={"40px"}
-                  fontWeight={"medium"}
-                  fontFamily={"roboto"}
-                >
-                  Add a new Job
-                </Heading>
-                <Stack spacing={4} overflowX={"scroll"}>
+              <VStack width={"70%"} >
+                <Stack spacing={4} overflowX={"scroll"} minHeight={'100vh'} marginTop={'150px'}>
                   <Input
                     value={job.jobName}
                     onChange={(e) =>
@@ -103,6 +96,7 @@ const JobsForm = () => {
                     placeholder="Job Role"
                     size="md"
                   />
+                  <input type="file" className="file-input file-input-bordered file-input-warning w-full max-w-xs" />
                   <Input
                     value={job.lastDate}
                     onChange={(e) =>
@@ -199,7 +193,7 @@ const JobsForm = () => {
         </>
       ) : (
         <>
-          <Box className="userReg" width={"100vw"} height={"100vh"}>
+          <Box className="userReg" width={"100vw"} minHeight={"120vh"}>
             <HStack
               width={"100vw"}
               height={"100vh"}
