@@ -4,11 +4,7 @@ import { db } from "../../firebase";
 import {
   collection,
   getDocs,
-  // getDoc,
-  // addDoc,
   setDoc,
-  // updateDoc,
-  // deleteDoc,
   doc,
 } from "firebase/firestore";
 
@@ -21,16 +17,6 @@ class userDataService {
       uid: uid,
     });
   };
-
-  // updateUser = (id, updatedUser) => {
-  //   const userDoc = doc(db, "users", id);
-  //   return updateDoc(userDoc, updatedUser);
-  // };
-
-  // deleteUser = (id) => {
-  //   const bookDoc = doc(db, "books", id);
-  //   return deleteDoc(bookDoc);
-  // };
 
   getUser = (id) => {
     const Userid = sessionStorage.getItem("uid");

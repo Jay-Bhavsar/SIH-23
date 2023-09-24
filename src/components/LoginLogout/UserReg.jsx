@@ -16,8 +16,11 @@ import { useState } from "react";
 import { IoIosRocket } from "react-icons/io";
 import Multiselect from "multiselect-react-dropdown";
 const UserReg = () => {
-  const [interest, setinterest] = useState(['web development','machine learning'])
-  const [skills, setskills] = useState(['dancing','gaming'])
+  const skills = ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6", "skill7"]
+  const interest =["Intersts1", "Interests2", "Interests3", "Interests4", "Interests5", "Interests6", "Interests7", "Interests8"]
+  
+  const [selectedSkills, setSelectedSkills ] = useState([]);
+  const [selectedInterests, setSelectedInterests ] = useState([]);
   return (
     <>
       <Box className="userReg" width={"100vw"} height={"100vh"}>
@@ -30,7 +33,7 @@ const UserReg = () => {
           // margin={'auto'}
         >
           <VStack width={"25%"}>
-            <IoIosRocket widsth fontSize={"300px"} color="white" />
+            <IoIosRocket fontSize={"300px"} color="white" />
             <Text
               color={"whiteAlpha.900"}
               fontSize={"40px"}
@@ -113,31 +116,44 @@ const UserReg = () => {
                 placeholder="Adhhar Number"
                 size="md"
               />
-              <Multiselect
-                isObject={false}
-                onRemove={(event) => {
-                  console.log(event);
-                }}
-                onSelect={(event) => {
-                  console.log(event);
-                }}
-                options={interest}
-              />
               <Select
                 placeholder="Select your Professional Experience"
                 variant={"filled"}
               >
-                <option value="option1">Less than 2years </option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
+                <option value="option1">0 - 1 Years</option>
+                <option value="option2">1 - 2 Years</option>
+                <option value="option3">2 - 3 Years</option>
+                <option value="option3">3 - 4 Years</option>
+                <option value="option3">4 - 5 Years</option>
+                <option value="option3">5+ Years</option>
               </Select>
+
               <Multiselect
+                placeholder="Selct your interests"
                 isObject={false}
+                showCheckbox={true}
+                avoidHighlightFirstOption={true}
+                showArrow={true}
                 onRemove={(event) => {
-                  console.log(event);
+                  setSelectedInterests(event);
                 }}
                 onSelect={(event) => {
-                  console.log(event);
+                  setSelectedInterests(event);
+                }}
+                options={interest}
+              />
+              
+              <Multiselect
+                placeholder={"Tell us about your skills"}
+                isObject={false}
+                showCheckbox={true}
+                avoidHighlightFirstOption={true}
+                showArrow={true}
+                onRemove={(event) => {
+                  setSelectedSkills(event);
+                }}
+                onSelect={(event) => {
+                  setSelectedSkills(event);
                 }}
                 options={skills}
               />

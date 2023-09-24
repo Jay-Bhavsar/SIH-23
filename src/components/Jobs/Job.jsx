@@ -11,7 +11,6 @@ import {
   HStack,
   Heading,
   Image,
-  Stack,
   Tag,
   TagLabel,
   Text,

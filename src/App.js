@@ -8,7 +8,6 @@ import { UserAuthContextProvider } from "./context/UserAuthContext";
 import "./components/Styles/Layout.css";
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import User from "./components/Auth/User";
-import Profile from "./components/Auth/Profile";
 import Logout from "./components/Auth/Logout";
 import Admin from "./components/Admin/Admin";
 import ForgotPassword from "./components/Auth/ForgotPassword";
@@ -29,6 +28,7 @@ import OrgReg from "./components/LoginLogout/OrgReg";
 import AddCourses from "./components/Courses/AddCourses";
 import BeforeUser from "./components/LoginLogout/BeforeUser";
 import BeforeOrg from "./components/LoginLogout/BeforeOrg";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -52,6 +52,7 @@ function App() {
               <Route exact path="/addcourse" element={<AddCourses />} />
               <Route exact path="/authuser" element={<BeforeUser />} />
               <Route exact path="/authorg" element={<BeforeOrg />} />
+              <Route exact path="/profile" element={<Profile />} />
 
               <Route path="/user" element={
                   <ProtectedRoute>
@@ -71,14 +72,14 @@ function App() {
 
               <Route path="/adminlogin" element={<Adminlogin />} />
 
-              <Route
+              {/* <Route
                 path="/profile"
                 element={
                   <ProtectedRoute>
                     <Profile />
                   </ProtectedRoute>
                 }
-              ></Route>
+              ></Route> */}
 
               <Route path="/logout" element={<Logout />}></Route>
 
