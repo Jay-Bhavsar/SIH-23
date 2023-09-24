@@ -7,6 +7,7 @@ import Header from "../Layout/Header";
 
 import image1 from "../Assets/img/log.svg";
 import image2 from "../Assets/img/register.svg";
+import { Box, HStack, Heading, Image } from "@chakra-ui/react";
 // import Footer from "../Home/Footer";
 
 const Login = () => {
@@ -94,7 +95,7 @@ const Login = () => {
           <form action=""
             onSubmit={handleSubmit2} className="sign-up-form">
             <h2 className="title">Register</h2>
-            <div className="input-field">
+            {/* <div className="input-field">
               <i className="fas fa-user"></i>
               <input className="inputarea" type="text" placeholder="Name" 
                 onChange={(e) => {
@@ -142,8 +143,57 @@ const Login = () => {
                 type="password"
                 placeholder="Re-Enter Password"
               />
-            </div> */}
-            <input type="submit" className=" btn" value="Sign up" />
+            </div> 
+
+            <input type="submit" className=" btn" value="Sign up" /> */}
+            <HStack
+              marginY={'100px'}
+              display={'flex'}
+              justifyContent={'space-between'}
+            >
+              <Link width={'50%'} to={'/reguser'}>
+                <Box
+                  width={'100%'}
+                  height={'auto'}
+                  paddingY={'20px '}
+                  boxShadow={'0px 10px 61px 10px rgba(0,0,0,0.1)'}
+                  paddingX={'30px'}
+                  borderRadius={'10%'}
+                >
+                  <Image src={image1} />
+                  <Heading
+                    fontSize={'20px'}
+                    fontWeight={'medium'}
+                    textAlign={'center'}
+                    fontFamily={'montserrat'}
+                  >
+                    As User
+                  </Heading>
+                </Box>
+              </Link>
+              {/* <Box width={'10px'} height={'200px'} backgroundColor={'orange'}></Box> */}
+              <Link width={'50%'} to={'/regorg'}>
+                <Box
+                  width={'100%'}
+                  height={'auto'}
+                  paddingY={'20px'}
+                  boxShadow={'0px 10px 61px 10px rgba(0,0,0,0.1)'}
+                  paddingX={'30px'}
+                  borderRadius={'10%'}
+                >
+                  <Image src={image1} />
+
+                  <Heading
+                    fontSize={'20px'}
+                    fontWeight={'medium'}
+                    textAlign={'center'}
+                    fontFamily={'montserrat'}
+                  >
+                    As Orgranization
+                  </Heading>
+                </Box>
+              </Link>
+            </HStack>
           </form>
         </div>
       </div>
@@ -151,7 +201,7 @@ const Login = () => {
         <div className="panel left-panel">
           <div className="content">
             <h3>New here ?</h3>
-            <p>Register to the PetroStats</p>
+            <p>Register to the PGRKAM</p>
             <button className="btn " onClick={toggelSwitch} id="sign-up-btn">
               Register
             </button>
@@ -161,7 +211,7 @@ const Login = () => {
         <div className="panel right-panel">
           <div className="content">
             <h3>One of us ?</h3>
-            <p>Log In to Petro Stats</p>
+            <p>Log In to PGRKAM</p>
             <button className="btn " onClick={toggelSwitch} id="sign-in-btn">
               Log In
             </button>
