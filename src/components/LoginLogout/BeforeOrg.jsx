@@ -45,7 +45,7 @@ const BeforeUser = () => {
 
     try {
       await signUp(email, password, newUser);
-      navigate("/login");
+      navigate("/regorg");
       alert("You have signed up successfully");
     } catch (err) {
       setError(err.message);
