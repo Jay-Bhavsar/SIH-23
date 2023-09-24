@@ -36,6 +36,13 @@ const OrgReg = () => {
               Welcome !
             </Text>
             <Text
+              fontSize={'25px'}
+              color={'whiteAlpha.900'}
+              textAlign={'center'}
+            >
+              Apply as a new Organization
+            </Text>
+            <Text
               fontSize={'20px'}
               color={'whiteAlpha.900'}
               textAlign={'center'}
@@ -45,14 +52,7 @@ const OrgReg = () => {
             </Text>
           </VStack>
           <VStack width={'70%'} >
-            <Heading
-              marginBottom={'40px'}
-              fontWeight={'medium'}
-              fontFamily={'roboto'}
-            >
-              Apply as an Organization
-            </Heading>
-            <Stack spacing={4} overflowX={'scroll'}>
+            <Stack marginTop={"50px"} spacing={4} overflowX={'scroll'}>
               <HStack>
                 <Input
                   variant={'filled'}
@@ -62,7 +62,7 @@ const OrgReg = () => {
                 />
                 
               </HStack>
-              
+              <input type="file" className="file-input file-input-bordered file-input-warning w-full max-w-xs" />
               <InputGroup>
                 <InputLeftAddon children="+91" />
                 <Input

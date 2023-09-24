@@ -29,6 +29,7 @@
     "pdf-lib": "^1.17.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
+    "react-camera-photo": "^1.5.17",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",

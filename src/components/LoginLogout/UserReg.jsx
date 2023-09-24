@@ -39,6 +39,13 @@ const UserReg = () => {
               Welcome !
             </Text>
             <Text
+              fontSize={"25px"}
+              color={"whiteAlpha.900"}
+              textAlign={"center"}
+            >
+              Apply as a new User
+            </Text>
+            <Text
               fontSize={"20px"}
               color={"whiteAlpha.900"}
               textAlign={"center"}
@@ -48,13 +55,6 @@ const UserReg = () => {
             </Text>
           </VStack>
           <VStack width={"70%"}>
-            <Heading
-              marginBottom={"40px"}
-              fontWeight={"medium"}
-              fontFamily={"roboto"}
-            >
-              Apply as a User
-            </Heading>
             <Stack spacing={4}>
               <HStack>
                 <Input
@@ -79,7 +79,7 @@ const UserReg = () => {
                   placeholder="phone number"
                 />
               </InputGroup>
-
+              <input type="file" className="file-input file-input-bordered file-input-warning w-full max-w-xs" />
               <Input
                 variant={"filled"}
                 _placeholder={{ color: "black" }}
