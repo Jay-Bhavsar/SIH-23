@@ -151,7 +151,7 @@ const Login = () => {
               display={'flex'}
               justifyContent={'space-between'}
             >
-              <Link width={'50%'} to={'/reguser'}>
+              <Link width={'50%'} to={'/authuser'}>
                 <Box
                   width={'100%'}
                   height={'auto'}
@@ -172,7 +172,7 @@ const Login = () => {
                 </Box>
               </Link>
               {/* <Box width={'10px'} height={'200px'} backgroundColor={'orange'}></Box> */}
-              <Link width={'50%'} to={'/regorg'}>
+              <Link width={'50%'} to={'/authorg'}>
                 <Box
                   width={'100%'}
                   height={'auto'}
