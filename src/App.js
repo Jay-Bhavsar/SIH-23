@@ -38,6 +38,8 @@ function App() {
             <Routes>
               <Route exact path="/login" element={<Login />} />
               <Route element={<ARComponent />} exact path="/ar" />
+
+              
               <Route path="/" element={<LandingPage />} />
               <Route exact path="/contact" element={<Contact />} />
               <Route exact path="/courses" element={<Courses />} />
