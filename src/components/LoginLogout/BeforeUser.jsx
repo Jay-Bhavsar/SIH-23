@@ -58,7 +58,7 @@ const BeforeUser = () => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <VStack width={"25%"}>
+          <VStack width={"25%"} display={['none','flex']}>
             <IoIosRocket widsth fontSize={"300px"} color="white" />
             <Text
               color={"whiteAlpha.900"}
@@ -83,7 +83,7 @@ const BeforeUser = () => {
             </Text>
           </VStack>
 
-          <VStack width={"70%"}>
+          <VStack width={['100%',"70%"]}>
             <Stack marginTop={"50px"} spacing={4} overflowX={"scroll"}>
               <form
                 action=""

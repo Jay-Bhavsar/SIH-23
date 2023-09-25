@@ -29,8 +29,8 @@ const JobUser = () => {
         <>
             <HStack width={'100%'} overflowX={'scroll'} margin={'auto'}>
                 <Card
-                    minW="50%"
-                    maxW={'50%'}
+                    minW={['100%',"50%"]}
+                    maxW={['100%','50%']}
                     boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1)"}
                     margin={"20px"}
                 >
@@ -92,11 +92,12 @@ const JobUser = () => {
                                             color={"grey"}
                                             fontFamily={"roboto"}
                                             textTransform={"uppercase"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Start date
                                         </Text>
                                     </Flex>
-                                    <Text fontFamily={"roboto"} textTransform={"uppercase"}>
+                                    <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
                                         27-10
                                     </Text>
                                 </VStack>
@@ -107,11 +108,12 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Duration
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         1Month
                                     </Text>
                                 </VStack>
@@ -122,11 +124,12 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Stipend
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         20000-30000
                                     </Text>
                                 </VStack>
@@ -171,8 +174,8 @@ const JobUser = () => {
                     </CardFooter>
                 </Card>
                 <Card
-                    minW="50%"
-                    maxW={'50%'}
+                    minW={['100%',"50%"]}
+                    maxW={['100%','50%']}
                     boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1)"}
                     margin={"20px"}
                 >
@@ -234,11 +237,12 @@ const JobUser = () => {
                                             color={"grey"}
                                             fontFamily={"roboto"}
                                             textTransform={"uppercase"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Start date
                                         </Text>
                                     </Flex>
-                                    <Text fontFamily={"roboto"} textTransform={"uppercase"}>
+                                    <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
                                         27-10
                                     </Text>
                                 </VStack>
@@ -249,11 +253,12 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Duration
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         1Month
                                     </Text>
                                 </VStack>
@@ -264,11 +269,12 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Stipend
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         20000-30000
                                     </Text>
                                 </VStack>
@@ -313,8 +319,8 @@ const JobUser = () => {
                     </CardFooter>
                 </Card>
                 <Card
-                    minW="50%"
-                    maxW={'50%'}
+                    minW={['100%',"50%"]}
+                    maxW={['100%','50%']}
                     boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1)"}
                     margin={"20px"}
                 >
@@ -376,11 +382,12 @@ const JobUser = () => {
                                             color={"grey"}
                                             fontFamily={"roboto"}
                                             textTransform={"uppercase"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Start date
                                         </Text>
                                     </Flex>
-                                    <Text fontFamily={"roboto"} textTransform={"uppercase"}>
+                                    <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
                                         27-10
                                     </Text>
                                 </VStack>
@@ -391,11 +398,12 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Duration
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         1Month
                                     </Text>
                                 </VStack>
@@ -406,11 +414,12 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Stipend
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         20000-30000
                                     </Text>
                                 </VStack>
@@ -455,8 +464,8 @@ const JobUser = () => {
                     </CardFooter>
                 </Card>
                 <Card
-                    minW="50%"
-                    maxW={'50%'}
+                    minW={['100%',"50%"]}
+                    maxW={['100%','50%']}
                     boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1)"}
                     margin={"20px"}
                 >
@@ -518,11 +527,12 @@ const JobUser = () => {
                                             color={"grey"}
                                             fontFamily={"roboto"}
                                             textTransform={"uppercase"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Start date
                                         </Text>
                                     </Flex>
-                                    <Text fontFamily={"roboto"} textTransform={"uppercase"}>
+                                    <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
                                         27-10
                                     </Text>
                                 </VStack>
@@ -533,11 +543,12 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Duration
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         1Month
                                     </Text>
                                 </VStack>
@@ -548,11 +559,447 @@ const JobUser = () => {
                                             textTransform={"uppercase"}
                                             color={"grey"}
                                             fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
                                         >
                                             Stipend
                                         </Text>
                                     </Flex>
-                                    <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
+                                        20000-30000
+                                    </Text>
+                                </VStack>
+                            </HStack>
+                            <HStack
+                                spacing={"4"}
+                                width={"100%"}
+                                justifyContent={"start"}
+                                marginTop={"15px"}
+                            >
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        2 Weeks Ago
+                                    </TagLabel>
+                                </Tag>
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        Internship
+                                    </TagLabel>
+                                </Tag>
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        Part Time
+                                    </TagLabel>
+                                </Tag>
+                            </HStack>
+                        </VStack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <ButtonGroup spacing="2">
+                            <Link to={"/jobs"}>
+                                <Button
+                                    fontFamily={"montserrat"}
+                                    variant="ghost"
+                                    colorScheme="orange"
+                                >
+                                    View Details
+                                </Button>
+                            </Link>
+                        </ButtonGroup>
+                    </CardFooter>
+                </Card>
+                <Card
+                    minW={['100%',"50%"]}
+                    maxW={['100%','50%']}
+                    boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1)"}
+                    margin={"20px"}
+                >
+                    <CardBody>
+                        <VStack>
+                            <HStack justifyContent={"space-between"}>
+                                <Flex
+                                    width={"70%"}
+                                    justifyContent={"space-between"}
+                                    flexDir={"column"}
+                                >
+                                    <Text textAlign={"start"}>
+                                        <Badge ml="1" colorScheme="green">
+                                            {" "}
+                                            Actively Hiring{" "}
+                                        </Badge>
+                                    </Text>
+                                    <Text
+                                        textAlign={"start"}
+                                        fontWeight={"bold"}
+                                        fontFamily={"roboto"}
+                                        fontSize={"20px"}
+                                    >
+                                        Mechenical Engineer
+                                        <Badge ml="1" colorScheme="green">
+                                            New
+                                        </Badge>
+                                    </Text>
+                                    <Text
+                                        fontFamily={"roboto"}
+                                        color={"grey"}
+                                        fontWeight={"bold"}
+                                        justifyContent={"start"}
+                                    >
+                                        GrowthClues
+                                    </Text>
+                                </Flex>
+                                <Image width={"20%"} src={imag} />
+                            </HStack>
+                            <Divider />
+                            <Flex
+                                width={"100%"}
+                                justifyContent={"flex-start"}
+                                alignItems={"center"}
+                            >
+                                <AiOutlineHome />
+                                <Text fontFamily={"roboto"}>Jaipur, Rajasthan</Text>
+                            </Flex>
+                            <Divider />
+                            <HStack
+                                width={"100%"}
+                                display={"flex"}
+                                justifyContent={"space-between"}
+                            >
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiOutlinePlayCircle color="grey" />
+                                        <Text
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            textTransform={"uppercase"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Start date
+                                        </Text>
+                                    </Flex>
+                                    <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
+                                        27-10
+                                    </Text>
+                                </VStack>
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiOutlineCalendar color="grey" />
+                                        <Text
+                                            textTransform={"uppercase"}
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Duration
+                                        </Text>
+                                    </Flex>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
+                                        1Month
+                                    </Text>
+                                </VStack>
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiFillCopy color="grey" />
+                                        <Text
+                                            textTransform={"uppercase"}
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Stipend
+                                        </Text>
+                                    </Flex>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
+                                        20000-30000
+                                    </Text>
+                                </VStack>
+                            </HStack>
+                            <HStack
+                                spacing={"4"}
+                                width={"100%"}
+                                justifyContent={"start"}
+                                marginTop={"15px"}
+                            >
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        2 Weeks Ago
+                                    </TagLabel>
+                                </Tag>
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        Internship
+                                    </TagLabel>
+                                </Tag>
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        Part Time
+                                    </TagLabel>
+                                </Tag>
+                            </HStack>
+                        </VStack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <ButtonGroup spacing="2">
+                            <Link to={"/jobs"}>
+                                <Button
+                                    fontFamily={"montserrat"}
+                                    variant="ghost"
+                                    colorScheme="orange"
+                                >
+                                    View Details
+                                </Button>
+                            </Link>
+                        </ButtonGroup>
+                    </CardFooter>
+                </Card>
+                <Card
+                    minW={['100%',"50%"]}
+                    maxW={['100%','50%']}
+                    boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1)"}
+                    margin={"20px"}
+                >
+                    <CardBody>
+                        <VStack>
+                            <HStack justifyContent={"space-between"}>
+                                <Flex
+                                    width={"70%"}
+                                    justifyContent={"space-between"}
+                                    flexDir={"column"}
+                                >
+                                    <Text textAlign={"start"}>
+                                        <Badge ml="1" colorScheme="green">
+                                            {" "}
+                                            Actively Hiring{" "}
+                                        </Badge>
+                                    </Text>
+                                    <Text
+                                        textAlign={"start"}
+                                        fontWeight={"bold"}
+                                        fontFamily={"roboto"}
+                                        fontSize={"20px"}
+                                    >
+                                        Mechenical Engineer
+                                        <Badge ml="1" colorScheme="green">
+                                            New
+                                        </Badge>
+                                    </Text>
+                                    <Text
+                                        fontFamily={"roboto"}
+                                        color={"grey"}
+                                        fontWeight={"bold"}
+                                        justifyContent={"start"}
+                                    >
+                                        GrowthClues
+                                    </Text>
+                                </Flex>
+                                <Image width={"20%"} src={imag} />
+                            </HStack>
+                            <Divider />
+                            <Flex
+                                width={"100%"}
+                                justifyContent={"flex-start"}
+                                alignItems={"center"}
+                            >
+                                <AiOutlineHome />
+                                <Text fontFamily={"roboto"}>Jaipur, Rajasthan</Text>
+                            </Flex>
+                            <Divider />
+                            <HStack
+                                width={"100%"}
+                                display={"flex"}
+                                justifyContent={"space-between"}
+                            >
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiOutlinePlayCircle color="grey" />
+                                        <Text
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            textTransform={"uppercase"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Start date
+                                        </Text>
+                                    </Flex>
+                                    <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
+                                        27-10
+                                    </Text>
+                                </VStack>
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiOutlineCalendar color="grey" />
+                                        <Text
+                                            textTransform={"uppercase"}
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Duration
+                                        </Text>
+                                    </Flex>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
+                                        1Month
+                                    </Text>
+                                </VStack>
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiFillCopy color="grey" />
+                                        <Text
+                                            textTransform={"uppercase"}
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Stipend
+                                        </Text>
+                                    </Flex>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
+                                        20000-30000
+                                    </Text>
+                                </VStack>
+                            </HStack>
+                            <HStack
+                                spacing={"4"}
+                                width={"100%"}
+                                justifyContent={"start"}
+                                marginTop={"15px"}
+                            >
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        2 Weeks Ago
+                                    </TagLabel>
+                                </Tag>
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        Internship
+                                    </TagLabel>
+                                </Tag>
+                                <Tag variant="subtle" colorScheme="blackAlpha">
+                                    <TagLabel fontFamily={"roboto"} color={"grey"}>
+                                        Part Time
+                                    </TagLabel>
+                                </Tag>
+                            </HStack>
+                        </VStack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                        <ButtonGroup spacing="2">
+                            <Link to={"/jobs"}>
+                                <Button
+                                    fontFamily={"montserrat"}
+                                    variant="ghost"
+                                    colorScheme="orange"
+                                >
+                                    View Details
+                                </Button>
+                            </Link>
+                        </ButtonGroup>
+                    </CardFooter>
+                </Card>
+                <Card
+                    minW={['100%',"50%"]}
+                    maxW={['100%','50%']}
+                    boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1)"}
+                    margin={"20px"}
+                >
+                    <CardBody>
+                        <VStack>
+                            <HStack justifyContent={"space-between"}>
+                                <Flex
+                                    width={"70%"}
+                                    justifyContent={"space-between"}
+                                    flexDir={"column"}
+                                >
+                                    <Text textAlign={"start"}>
+                                        <Badge ml="1" colorScheme="green">
+                                            {" "}
+                                            Actively Hiring{" "}
+                                        </Badge>
+                                    </Text>
+                                    <Text
+                                        textAlign={"start"}
+                                        fontWeight={"bold"}
+                                        fontFamily={"roboto"}
+                                        fontSize={"20px"}
+                                    >
+                                        Mechenical Engineer
+                                        <Badge ml="1" colorScheme="green">
+                                            New
+                                        </Badge>
+                                    </Text>
+                                    <Text
+                                        fontFamily={"roboto"}
+                                        color={"grey"}
+                                        fontWeight={"bold"}
+                                        justifyContent={"start"}
+                                    >
+                                        GrowthClues
+                                    </Text>
+                                </Flex>
+                                <Image width={"20%"} src={imag} />
+                            </HStack>
+                            <Divider />
+                            <Flex
+                                width={"100%"}
+                                justifyContent={"flex-start"}
+                                alignItems={"center"}
+                            >
+                                <AiOutlineHome />
+                                <Text fontFamily={"roboto"}>Jaipur, Rajasthan</Text>
+                            </Flex>
+                            <Divider />
+                            <HStack
+                                width={"100%"}
+                                display={"flex"}
+                                justifyContent={"space-between"}
+                            >
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiOutlinePlayCircle color="grey" />
+                                        <Text
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            textTransform={"uppercase"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Start date
+                                        </Text>
+                                    </Flex>
+                                    <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
+                                        27-10
+                                    </Text>
+                                </VStack>
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiOutlineCalendar color="grey" />
+                                        <Text
+                                            textTransform={"uppercase"}
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Duration
+                                        </Text>
+                                    </Flex>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
+                                        1Month
+                                    </Text>
+                                </VStack>
+                                <VStack>
+                                    <Flex alignItems={"center"}>
+                                        <AiFillCopy color="grey" />
+                                        <Text
+                                            textTransform={"uppercase"}
+                                            color={"grey"}
+                                            fontFamily={"roboto"}
+                                            fontSize={['10px','16px']}
+                                        >
+                                            Stipend
+                                        </Text>
+                                    </Flex>
+                                    <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                                         20000-30000
                                     </Text>
                                 </VStack>

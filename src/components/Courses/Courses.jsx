@@ -21,7 +21,7 @@ const Course = ({ title, imageScr, id, creator, description }) => {
   //   };
   return (
     <VStack
-      width={"30%"}
+      width={['90%',"30%"]}
       className="course"
       alignItems={["center", "flex-start"]}
       boxShadow={"0px 10px 61px 26px rgba(0,0,0,0.1) "}
@@ -35,9 +35,9 @@ const Course = ({ title, imageScr, id, creator, description }) => {
         maxW="200px"
         fontFamily={"sans-serif"}
         noOfLines="3"
-        size={"sm"}
+        size={['lg',"sm"]}
       />
-      <Text children={description} noOfLines="2" />
+      <Text children={description}  noOfLines="2" />
       <HStack>
         <Text
           children={creator}
@@ -76,7 +76,7 @@ const Courses = () => {
   ];
   return (
     <Container minH={"100vh"} maxW={"container.lg"} paddingY={"8"}>
-      <Heading children="All Courses" m={"8"} />
+      <Heading children="All Courses" marginTop={'100px'} />
       <HStack
         width={"100%"}
         height={"100px"}

@@ -16,14 +16,15 @@ const Home = () => {
     <>
       <Box className="hero " width={"100vw"} height={"100vh"}>
         <Box width={"90vw"} height={"100vh"} margin={"auto"}>
-          <HStack marginTop={"60px"} justifyContent={"space-between"} dir={"row"}>
-            <VStack width={"45%"}>
+          <Stack marginTop={"60px"} justifyContent={"space-between"} direction={['column','row']}>
+            <VStack width={["90%","45%"]} alignContent={'center'} margin={['auto','0']}>
               <Heading
                 textAlign={"center"}
                 fontWeight={"medium"}
                 color={"#dd6b20"}
                 fontFamily={"montserrat"}
-                fontSize={["20px", "45px"]}
+                fontSize={["30px", "45px"]}
+                marginTop={['40px','200px']}
               >
                 PGRKAM{" "}
                 <span style={{ color: "black", fontFamily: "montserrat" }}>
@@ -34,7 +35,7 @@ const Home = () => {
               </Heading>
               <Text
                 fontFamily={"montserrat"}
-                fontSize={"25px"}
+                fontSize={["15px","25px"]}
                 color={"grey"}
                 textAlign="center"
               >
@@ -57,12 +58,13 @@ const Home = () => {
               </HStack>
             </VStack>
             <Image
-              justifyContent={"flex-start"}
+              justifyContent={["center","flex-start"]}
               border
-              width={"50%"}
+              width={["90%","50%"]}
               src={hero}
+              marginTop={['50px','0']}
             />
-          </HStack>
+          </Stack>
         </Box>
       </Box>
     </>

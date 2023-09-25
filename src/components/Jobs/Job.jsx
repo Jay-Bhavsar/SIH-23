@@ -11,6 +11,7 @@ import {
   HStack,
   Heading,
   Image,
+  Stack,
   Tag,
   TagLabel,
   Text,
@@ -55,7 +56,7 @@ const Job = () => {
     return (
       <Card
         key={index}
-        width="40%"
+        width={["100%", "40%"]}
         boxShadow={"0px 10px 61px 26px rgba(0,0,0,0.1)"}
         margin={"20px"}
       >
@@ -63,7 +64,7 @@ const Job = () => {
           <VStack>
             <HStack justifyContent={"space-between"}>
               <Flex
-                width={"70%"}
+                width={"60%"}
                 justifyContent={"space-between"}
                 flexDir={"column"}
               >
@@ -93,7 +94,7 @@ const Job = () => {
                   GrowthClues
                 </Text>
               </Flex>
-              <Image width={"20%"} src={imag} />
+              <Image width={['40%',"20%"]} src={imag} />
             </HStack>
             <Divider />
             <Flex
@@ -116,12 +117,12 @@ const Job = () => {
                   <Text
                     color={"grey"}
                     fontFamily={"roboto"}
-                    textTransform={"uppercase"}
+                    textTransform={"uppercase"} fontSize={['10px','16px']}
                   >
                     Start date
                   </Text>
                 </Flex>
-                <Text fontFamily={"roboto"} textTransform={"uppercase"}>
+                <Text fontFamily={"roboto"} textTransform={"uppercase"} fontSize={['10px','16px']}>
                   {item.item.lastDate}
                 </Text>
               </VStack>
@@ -132,11 +133,12 @@ const Job = () => {
                     textTransform={"uppercase"}
                     color={"grey"}
                     fontFamily={"roboto"}
+                    fontSize={['10px','16px']}
                   >
                     Duration
                   </Text>
                 </Flex>
-                <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                   1Month
                 </Text>
               </VStack>
@@ -147,11 +149,12 @@ const Job = () => {
                     textTransform={"uppercase"}
                     color={"grey"}
                     fontFamily={"roboto"}
+                    fontSize={['10px','16px']}
                   >
                     Stipend
                   </Text>
                 </Flex>
-                <Text textTransform={"uppercase"} fontFamily={"roboto"}>
+                <Text textTransform={"uppercase"} fontFamily={"roboto"} fontSize={['10px','16px']}>
                   {item.item.salRange + " /month"}
                 </Text>
               </VStack>
@@ -217,7 +220,7 @@ const Job = () => {
       >
         <Heading
           textAlign={"center"}
-          marginTop={"50px"}
+          marginTop={['100px',"50px"]}
           fontFamily={"montserrat"}
         >
           Find your dream job now !!
@@ -225,32 +228,34 @@ const Job = () => {
         <Text textAlign={"center"} fontFamily={"montserrat"}>
           5 lakh+ jobs for you to explore
         </Text>
-        <Link to={"/jobform"}>
-          <ButtonGroup spacing={'10'}>
-            <Button
-              textAlign={"center"}
-              size={"lg"}
-              colorScheme="orange"
-              variant={"ghost"}
-              leftIcon={<BiPlusMedical fontWeight={"bolder"} />}
-              marginTop={"40px"}
-            >
-              Add a new Job
-            </Button>
+        <Stack width={'100%'} spacing={'2'} flexDir={['column','row']} display={'flex'} justify={'center'} alignItems={'center'}>
+          <Link to={"/jobform"}>
+              <Button
+                textAlign={"center"}
+                size={"lg"}
+                colorScheme="orange"
+                variant={"ghost"}
+                leftIcon={<BiPlusMedical fontWeight={"bolder"} />}
+                marginTop={"40px"}
+              >
+                Add a new Job
+              </Button>
+          </Link>
+          <Link>
             <Button
               textAlign={"center"}
               size={"lg"}
               colorScheme="orange"
               variant={"ghost"}
               leftIcon={<Search fontWeight={"bolder"} />}
-              marginTop={"40px"}
+              marginTop={['5px',"40px"]}
             >
               Search Nearby jobs
             </Button>
-          </ButtonGroup>
-        </Link>
+          </Link>
+        </Stack>
         <Flex
-          width={"90%"}
+          width={"100%"}
           margin={"auto"}
           justifyContent={"space-evenly"}
           flexWrap={"wrap"}

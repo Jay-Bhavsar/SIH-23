@@ -5,6 +5,7 @@ import {
   HStack,
   Heading,
   Image,
+  Stack,
   Tab,
   TabList,
   TabPanel,
@@ -36,11 +37,11 @@ const Profile = () => {
           >
             Profile
           </Heading>
-          <HStack width={"100%"} height={"90%"}>
+          <Stack width={"100%"} minHeight={"90%"} direction={['column','row']}>
             <Box
               padding={"20px"}
               height={"100vh"}
-              width={"30%"}
+              width={['100%',"30%"]}
               margin={"auto"}
               //   border={"1px solid black"}
             >
@@ -82,11 +83,11 @@ const Profile = () => {
             </Box>
             <Box
               minHeight={"100vh"}
-              width={"60%"}
+              width={['100%',"60%"]}
               margin={"auto"}
               //   border={"1px solid black"}
             >
-              <HStack marginTop={'50px'}>
+              <Stack marginTop={['0px','50px']} direction={['column','row']}>
                 <Heading fontFamily={"andika"} fontSize={"35px"}>
                   Karan Sharma
                 </Heading>
@@ -99,7 +100,7 @@ const Profile = () => {
                   <LocationOn fontSize={"15px"} />
                   Jaipur, Rajasthan
                 </Text>
-              </HStack>
+              </Stack>
               <Heading
                 fontSize={"15px"}
                 color={"blue"}
@@ -117,7 +118,7 @@ const Profile = () => {
                 <span style={{ color: "grey", fontWeight: "bold" }}>
                   Professional Experience :{" "}
                 </span>{" "}
-                2 Years
+                2-Years
               </Heading>
               <HStack marginTop={'20px'}>
                 <Heading
@@ -129,15 +130,15 @@ const Profile = () => {
                   Resume :
                 </Heading>
                 <Text fontSize={"20px"} textDecor={'underline'} color={'blue'}>Resume.pdf</Text>
-                <Button marginX={'20px'} colorScheme="orange" size={'sm'} variant={'outline'}>Add/Update Resume</Button>
+                <Button display={['none','block']} marginX={'20px'} colorScheme="orange" size={'sm'} variant={'outline'}>Add/Update Resume</Button>
               </HStack>
-              <Tabs size="lg" variant="enclosed" marginTop={"50px"}>
+              <Tabs size={['sm',"lg"]} variant="enclosed" marginTop={"50px"}>
                 <TabList>
                   <Tab
                     fontSize={"17px"}
                     fontFamily={"montserrat"}
                     fontWeight={"medium"}
-                    marginX={"19px"}
+                    marginX={['5px',"19px"]}
                   >
                     <Person /> About
                   </Tab>
@@ -145,7 +146,7 @@ const Profile = () => {
                     fontSize={"17px"}
                     fontFamily={"montserrat"}
                     fontWeight={"medium"}
-                    marginX={"19px"}
+                    marginX={['5px',"19px"]}
                   >
                     <FaLaptopCode />
                       Courses Applied
@@ -154,7 +155,7 @@ const Profile = () => {
                     fontSize={"17px"}
                     fontFamily={"montserrat"}
                     fontWeight={"medium"}
-                    marginX={"19px"}
+                    marginX={['5px',"19px"]}
                   >
                     <BsBriefcaseFill />
                     Jobs Applied
@@ -173,7 +174,7 @@ const Profile = () => {
                 </TabPanels>
               </Tabs>
             </Box>
-          </HStack>
+          </Stack>
         </VStack>
       </Box>
     </>

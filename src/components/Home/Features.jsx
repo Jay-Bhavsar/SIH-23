@@ -31,7 +31,7 @@ const Features = () => {
             direction={{ base: 'column', sm: 'row' }}
             overflow="hidden"
             variant="filled"
-            width={'80%'}
+            width={['90%',"80%"]}
             margin={'auto'}
             marginBottom={'40px'}
           >
@@ -70,7 +70,7 @@ const Features = () => {
             direction={{ base: 'column', sm: 'row-reverse' }}
             overflow="hidden"
             variant="filled"
-            width={'80%'}
+            width={['90%',"80%"]}
             margin={'auto'}
             marginBottom={'40px'}
           >
@@ -111,7 +111,7 @@ const Features = () => {
             direction={{ base: 'column', sm: 'row' }}
             overflow="hidden"
             variant="filled"
-            width={'80%'}
+            width={['90%',"80%"]}
             margin={'auto'}
             marginBottom={'40px'}
           >
@@ -150,7 +150,7 @@ const Features = () => {
             direction={{ base: 'column', sm: 'row-reverse' }}
             overflow="hidden"
             variant="filled"
-            width={'80%'}
+            width={['90%',"80%"]}
             margin={'auto'}
             marginBottom={'40px'}
           >
@@ -189,7 +189,7 @@ const Features = () => {
             direction={{ base: 'column', sm: 'row' }}
             overflow="hidden"
             variant="filled"
-            width={'80%'}
+            width={['90%',"80%"]}
             margin={'auto'}
             marginBottom={'40px'}
           >
@@ -229,7 +229,7 @@ const Features = () => {
             direction={{ base: 'column', sm: 'row-reverse' }}
             overflow="hidden"
             variant="filled"
-            width={'80%'}
+            width={['90%',"80%"]}
             margin={'auto'}
             marginBottom={'40px'}
           >
@@ -268,7 +268,7 @@ const Features = () => {
             direction={{ base: 'column', sm: 'row' }}
             overflow="hidden"
             variant="filled"
-            width={'80%'}
+            width={['90%',"80%"]}
             margin={'auto'}
             marginBottom={'40px'}
           >

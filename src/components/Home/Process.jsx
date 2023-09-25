@@ -130,7 +130,7 @@ const Process = () => {
             <Example />
           </VStack>
           <VStack>
-            <Image boxSize={'600px'} src={punjab} />
+            <Image boxSize={['300px','600px']} src={punjab} />
           </VStack>
           <VStack>
             <Example2 />
