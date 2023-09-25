@@ -135,7 +135,7 @@ const BeforeUser = () => {
                   <p style={{ color: "red" }}>{error}</p>
                 )}
 
-                  <Button variant={'solid'} colorScheme="orange" marginTop={'20px'}>Sign Up</Button>
+                  <Button onClick={handleSubmit2} variant={'solid'} colorScheme="orange" marginTop={'20px'}>Sign Up</Button>
               </form>
             </Stack>
           </VStack>

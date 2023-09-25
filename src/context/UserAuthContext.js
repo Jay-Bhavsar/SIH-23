@@ -19,8 +19,11 @@ const userAuthContext = createContext();
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState("");
   function signUp(email, password, userData) {
+    console.log("Signup functiopn called");
     return createUserWithEmailAndPassword(auth, email, password).then((userCreds) => {
       userServices.addUsers(userCreds.user.uid, userData);
+      // sessionStorage.setItem("uid", userCreds.user.uid);
+      // sessionStorage.setItem("uid", userCreds.user.uid);
     })
   }
   function login(email, password) {

@@ -9,18 +9,15 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import imag from "../../components/Assets/img/log.svg";
 import StarPicker from "react-star-picker";
-const Course = ({ title, imageScr, id, creator, description }) => {
-  //   const [rating, setRating] = useState(null);
+const Course = ({ item, index }) => {
 
-  //   const onChange = value => {
-  //     setRating(value);
-  //   };
   return (
     <VStack
+      key = {index}
       width={"30%"}
       className="course"
       alignItems={["center", "flex-start"]}
@@ -28,19 +25,19 @@ const Course = ({ title, imageScr, id, creator, description }) => {
       padding={"20px"}
       marginY={"20px"}
     >
-      <Image src={imageScr} boxSize="60" objectFit={"contain"} />
+      <Image src={imag} boxSize="60" objectFit={"contain"} />
       <Heading
         textAlign={["center", "left"]}
-        children={title}
+        children={item.courseName}
         maxW="200px"
         fontFamily={"sans-serif"}
         noOfLines="3"
         size={"sm"}
       />
-      <Text children={description} noOfLines="2" />
+      <Text children={item.description} noOfLines="2" />
       <HStack>
         <Text
-          children={creator}
+          children={item.creator}
           textTransform="uppercase"
           fontFamily={"body"}
         />
@@ -50,10 +47,10 @@ const Course = ({ title, imageScr, id, creator, description }) => {
         <Text>4.5 (1202)</Text>
       </HStack>
       <HStack>
-        <Text>₹5,000</Text>
+        <Text>₹{item.price}</Text>
       </HStack>
       <Stack alignItems={"center"} direction={["column", "row"]}>
-        <Link to={`/course/${id}`}>
+        <Link to={`/course/${item.courseId}`}>
           <Button colorScheme={"orange"}>Buy Now</Button>
         </Link>
       </Stack>
@@ -74,6 +71,29 @@ const Courses = () => {
     "Data Science",
     "Game Development",
   ];
+
+  const [courses, setCourses] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://sih23-backend.vercel.app/allCourse", {
+      method: "GET",
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    })
+      .then((resposne) => resposne.json())
+      .then((data) => {
+        setIsLoading(!isLoading);
+        setCourses([...data]);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <Container minH={"100vh"} maxW={"container.lg"} paddingY={"8"}>
       <Heading children="All Courses" m={"8"} />
@@ -119,46 +139,12 @@ const Courses = () => {
         justifyContent={["flex-start", "space-evenly"]}
         alignItems={["center", "flex-start"]}
       >
-        <Course
-          views="2"
-          title="Web Development"
-          imageScr={imag}
-          id="sample"
-          addToPlaylistHandler={addToPlaylistHandler1}
-          creator="Dr.Luis Anderson"
-          description="sample"
-          lectureCount="5"
-        />
-        <Course
-          views="2"
-          title="Web Development"
-          imageScr={imag}
-          id="sample"
-          addToPlaylistHandler={addToPlaylistHandler1}
-          creator="Dr.Luis Anderson"
-          description="sample"
-          lectureCount="5"
-        />
-        <Course
-          views="2"
-          title="Web Development"
-          imageScr={imag}
-          id="sample"
-          addToPlaylistHandler={addToPlaylistHandler1}
-          creator="Dr.Luis Anderson"
-          description="sample"
-          lectureCount="5"
-        />
-        <Course
-          views="2"
-          title="Web Development"
-          imageScr={imag}
-          id="sample"
-          addToPlaylistHandler={addToPlaylistHandler1}
-          creator="Dr.Luis Anderson"
-          description="sample"
-          lectureCount="5"
-        />
+
+
+        {courses.map((item, index) => (
+          <Course item={item} index={index} />
+        ))} 
+          
       </Stack>
     </Container>
   );

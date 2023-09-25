@@ -31,7 +31,7 @@ const BeforeUser = () => {
     e.preventDefault();
     setError("");
     setMessage("");
-
+    console.log("Hello ");
     // Step 3: Check if the password and confirm password match
     if (password !== confirmPassword) {
       setError("Passwords do not match");
@@ -40,7 +40,7 @@ const BeforeUser = () => {
 
     const newUser = {
       email,
-      role: "user",
+      role: "company",
     };
 
     try {
@@ -129,7 +129,7 @@ const BeforeUser = () => {
                   <p style={{ color: "red" }}>{error}</p>
                 )}
 
-                  <Button variant={'solid'} colorScheme="orange" marginTop={'20px'} size={'lg'}>Sign Up</Button>
+                  <Button onClick={handleSubmit2} variant={'solid'} colorScheme="orange" marginTop={'20px'} size={'lg'}>Sign Up</Button>
               </form>
             </Stack>
           </VStack>
