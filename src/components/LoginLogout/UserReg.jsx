@@ -22,8 +22,8 @@ const UserReg = () => {
   const interest =["Intersts1", "Interests2", "Interests3", "Interests4", "Interests5", "Interests6", "Interests7", "Interests8"]
   const template = {
     name : "",
+    dob : "",
     phone : "",
-    email: "",
     address : "",
     pincode : "",
     city : "",
@@ -73,7 +73,7 @@ const UserReg = () => {
           alignItems={"center"}
           // margin={'auto'}
         >
-          <VStack width={"25%"} display={['none','flex']}>
+          <VStack width={"25%"}>
             <IoIosRocket fontSize={"300px"} color="white" />
             <Text
               color={"whiteAlpha.900"}
@@ -98,7 +98,7 @@ const UserReg = () => {
               !!
             </Text>
           </VStack>
-          <VStack width={['90%',"70%"]}>
+          <VStack width={"70%"}>
             <Stack spacing={4}>
               <HStack>
                 <Input
