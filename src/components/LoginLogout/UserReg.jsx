@@ -22,8 +22,8 @@ const UserReg = () => {
   const interest =["Intersts1", "Interests2", "Interests3", "Interests4", "Interests5", "Interests6", "Interests7", "Interests8"]
   const template = {
     name : "",
-    dob : "",
     phone : "",
+    email: "",
     address : "",
     pincode : "",
     city : "",
