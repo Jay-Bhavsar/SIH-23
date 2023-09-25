@@ -49,11 +49,11 @@ function App() {
               <Route exact path="/jobform" element={<JobsForm />} />
               <Route exact path="/events" element={<Calendar />} />
               <Route exact path="/mission" element={<OurMission />} />
-              <Route exact path="/reguser" element={<UserReg />} />
-              <Route exact path="/regorg" element={<OrgReg />} />
+              <Route exact path="/reguser" element={<ProtectedRoute><UserReg /></ProtectedRoute>} />
+              <Route exact path="/regorg" element={<ProtectedRoute><OrgReg /></ProtectedRoute>} />
               <Route exact path="/addcourse" element={<AddCourses />} />
-              <Route exact path="/authuser" element={<BeforeUser />} />
-              <Route exact path="/authorg" element={<BeforeOrg />} />
+              <Route exact path="/authuser" element={<ProtectedRoute><BeforeUser /></ProtectedRoute>}/>
+              <Route exact path="/authorg" element={<ProtectedRoute><BeforeOrg /></ProtectedRoute>} />
               <Route exact path="/profile" element={<Profile />} />
               <Route exact path="/location" element={<Location />} />
 

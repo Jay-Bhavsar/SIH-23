@@ -14,10 +14,13 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { IoIosDocument } from "react-icons/io";
+import Multiselect from "multiselect-react-dropdown";
 
 const JobsForm = () => {
   const [showForm, setShowForm] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const skills = ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6", "skill7"];
+  const [selectedSkills, setSelectedSkills] = useState([]);
   const template = {
     jobName: "",
     lastDate: "",
@@ -164,25 +167,28 @@ const JobsForm = () => {
                   />
 
                   <Select placeholder="Job Type" variant={"filled"}>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 4</option>
-                    <option value="option4">Option 5</option>
-                    <option value="option5">Option 6</option>
-                    <option value="option6">Option 7</option>
-                    <option value="option7">Option 8</option>
-                    <option value="option8">Option 9</option>
-                    <option value="option9">Option 10</option>
-                    <option value="option10">Option 11</option>
-                    <option value="option11">Option 12</option>
-                    <option value="option12">Option 13</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Contract Based">Contract Based</option>
+                    <option value="Frelance">Frelance</option>
+                    <option value="Part Time">Part Time</option>
                   </Select>
-                  <Textarea
-                    value={job.skills}
-                    onChange={(e) => setJob({ ...job, skills: e.target.value })}
-                    variant={"filled"}
-                    placeholder="Skills Required"
+
+                  <Multiselect
+                    placeholder="Skills Gained"
+                    isObject={false}
+                    showCheckbox={true}
+                    avoidHighlightFirstOption={true}
+                    showArrow={true}
+                    onRemove={(event) => {
+                      setSelectedSkills(event);
+                    }}
+                    onSelect={(event) => {
+                      setSelectedSkills(event);
+                    }}
+                    options={skills}
                   />
+
                   <Button
                     type="submit"
                     onClick={submitJob}

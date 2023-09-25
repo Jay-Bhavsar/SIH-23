@@ -16,11 +16,48 @@ import { useState } from "react";
 import { FaLaptopCode } from "react-icons/fa";
 import Multiselect from "multiselect-react-dropdown";
 const AddCourses = () => {
-  const [interest, setinterest] = useState([
-    "web development",
-    "machine learning",
-  ]);
-  const [skills, setskills] = useState(["dancing", "gaming"]);
+  const interest =["Intersts1", "Interests2", "Interests3", "Interests4", "Interests5", "Interests6", "Interests7", "Interests8"]
+  const skills = ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6", "skill7"];
+  const [selectedSkills, setSelectedSkills] = useState([]);
+  const [selectedInterests, setSelectedInterests] = useState([]);
+  const template = {
+    courseName : "",
+    thumbnail : "",
+    creator : "",
+    price : "",
+    numOfLecttures : "",
+    category : "",
+    description : "",
+  }
+  const [course, setCourse] = useState({...template});
+  
+  function submitCourse() {
+    console.log("Clicked submit course");
+    const uid = sessionStorage.getItem("uid");
+    // Fetch company Id and put her (Very important)
+    const temp = {
+      ...course,
+      uid: uid,
+      skills : selectedSkills,
+      categories : selectedInterests
+    };
+    fetch("https://sih23-backend.vercel.app/course", {
+      method: "POST",
+      body: JSON.stringify(temp),
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    })
+      .then((resposne) => resposne.json())
+      .then((data) => {
+        console.log(data);
+        setCourse(template);
+        setSelectedInterests([]);
+        setSelectedSkills([]);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }
+
   return (
     <>
       <Box className="userReg" width={"100vw"} height={"100vh"}>
@@ -55,6 +92,10 @@ const AddCourses = () => {
             <Stack spacing={4}>
               <HStack>
                 <Input
+                  value={course.courseName}
+                    onChange={(e) =>
+                      setCourse({ ...course, courseName: e.target.value })
+                    }
                   variant={"filled"}
                   _placeholder={{ color: "black" }}
                   placeholder="Name of Course"
@@ -68,6 +109,10 @@ const AddCourses = () => {
                 className="file-input file-input-bordered file-input-warning w-full max-w-xs"
               />
               <Input
+                value={course.creator}
+                onChange={(e) =>
+                  setCourse({ ...course, creator: e.target.value })
+                }
                 variant={"filled"}
                 _placeholder={{ color: "black" }}
                 placeholder="Name of Creator"
@@ -78,23 +123,43 @@ const AddCourses = () => {
                 <Input variant={"filled"} placeholder="Number of Lectures" />
               </ButtonGroup>
               <Multiselect
+                placeholder="Select the Categories"
                 isObject={false}
+                showCheckbox={true}
+                avoidHighlightFirstOption={true}
+                showArrow={true}
                 onRemove={(event) => {
-                  console.log(event);
+                  setSelectedInterests(event);
                 }}
                 onSelect={(event) => {
-                  console.log(event);
+                  setSelectedInterests(event);
                 }}
                 options={interest}
-                placeholder="Skills to be provided"
               />
-              <Select placeholder="Category of Course" variant={"filled"}>
-                <option value="option1">Less than 2years </option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-              </Select>
-              <Textarea placeholder="Description of Course" />
-              <Button size={"lg"} colorScheme="orange" variant={"solid"}>
+
+              <Multiselect
+                placeholder="Skills to be gained"
+                isObject={false}
+                showCheckbox={true}
+                avoidHighlightFirstOption={true}
+                showArrow={true}
+                onRemove={(event) => {
+                  setSelectedSkills(event);
+                }}
+                onSelect={(event) => {
+                  setSelectedSkills(event);
+                }}
+                options={skills}
+              />
+
+              <Textarea
+                 value={course.description}
+                  onChange={(e) =>
+                    setCourse({ ...course, description: e.target.value })
+                  }
+                placeholder="Description of Course"
+              />
+              <Button onClick = {submitCourse} size={"lg"} colorScheme="orange" variant={"solid"}>
                 Submit
               </Button>
             </Stack>
