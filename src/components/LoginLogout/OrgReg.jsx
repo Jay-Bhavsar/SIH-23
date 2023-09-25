@@ -13,7 +13,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import {  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IoIosRocket } from "react-icons/io";
 const OrgReg = () => {
@@ -77,9 +77,7 @@ const OrgReg = () => {
           alignItems={"center"}
           // margin={'auto'}
         >
-          <VStack width={'25%'} display={['none','flex']}>
-            <IoIosRocket widsth fontSize={'300px'} color="white" />
-          <VStack width={"25%"}>
+          <VStack width={"25%"} display={['flex','block']}>
             <IoIosRocket widsth fontSize={"300px"} color="white" />
             <Text
               color={"whiteAlpha.900"}
@@ -104,9 +102,7 @@ const OrgReg = () => {
               organization !!
             </Text>
           </VStack>
-          <VStack width={['90%','70%']} >
-            <Stack marginTop={"50px"} spacing={4} overflowX={'scroll'}>
-          <VStack width={"70%"}>
+          <VStack width={['100%',"70%"]}>
             <Stack marginTop={"50px"} spacing={4} overflowX={"scroll"}>
               <HStack>
                 <Input
