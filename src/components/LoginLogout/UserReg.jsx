@@ -73,7 +73,7 @@ const UserReg = () => {
           alignItems={"center"}
           // margin={'auto'}
         >
-          <VStack width={"25%"}>
+          <VStack width={"25%"} display={['none','flex']}>
             <IoIosRocket fontSize={"300px"} color="white" />
             <Text
               color={"whiteAlpha.900"}
@@ -98,7 +98,7 @@ const UserReg = () => {
               !!
             </Text>
           </VStack>
-          <VStack width={"70%"}>
+          <VStack width={['90%',"70%"]}>
             <Stack spacing={4}>
               <HStack>
                 <Input

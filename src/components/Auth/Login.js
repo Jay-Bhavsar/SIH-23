@@ -7,7 +7,7 @@ import Header from "../Layout/Header";
 
 import image1 from "../Assets/img/log.svg";
 import image2 from "../Assets/img/register.svg";
-import { Box, HStack, Heading, Image } from "@chakra-ui/react";
+import { Box, HStack, Heading, Image, Stack } from "@chakra-ui/react";
 // import Footer from "../Home/Footer";
 
 const Login = () => {
@@ -146,14 +146,16 @@ const Login = () => {
             </div> 
 
             <input type="submit" className=" btn" value="Sign up" /> */}
-            <HStack
+            <Stack
               marginY={'100px'}
               display={'flex'}
-              justifyContent={'space-between'}
+              justifyContent={['center','space-between']}
+              alignItems={'center'}
+              flexDirection={['column','row']}
             >
-              <Link width={'50%'} to={'/authuser'}>
+            <Link width={['100%','50%']} to={'/authuser'}>
                 <Box
-                  width={'100%'}
+                  width={['60%','100%']}
                   height={'auto'}
                   paddingY={'20px '}
                   boxShadow={'0px 10px 61px 10px rgba(0,0,0,0.1)'}
@@ -171,10 +173,9 @@ const Login = () => {
                   </Heading>
                 </Box>
               </Link>
-              {/* <Box width={'10px'} height={'200px'} backgroundColor={'orange'}></Box> */}
-              <Link width={'50%'} to={'/authorg'}>
+              <Link width={['100%','50%']} to={'/authorg'}>
                 <Box
-                  width={'100%'}
+                  width={['60%','100%']}
                   height={'auto'}
                   paddingY={'20px'}
                   boxShadow={'0px 10px 61px 10px rgba(0,0,0,0.1)'}
@@ -193,7 +194,7 @@ const Login = () => {
                   </Heading>
                 </Box>
               </Link>
-            </HStack>
+            </Stack>
           </form>
         </div>
       </div>

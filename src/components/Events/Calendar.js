@@ -22,17 +22,16 @@ import pic7 from '../Assets/img/7.svg'
 import pic8 from '../Assets/img/8.svg'
 const Calendar = () => {
     return (
-        <><Box className='bgmaker'>
-            <HStack width={'80%'} margin={'auto'} display={'flex'} minHeight={'100vh'} justifyContent={'center'} alignItems={'center'} >
-                <Heading width={'40%'} fontSize={'100px'} fontFamily={'Skranji'} color={'black'} fontWeight={'medium'}>Event Calendar</Heading>
-                <VStack width={'60%'} height={'80vh'} overflowY={'scroll'}>
-                    <Heading></Heading>
+        <><Box className='bgmaker' width={'100%'} height={'100vh'}>
+            <Stack width={'90%'} margin={'auto'} display={'flex'} flexDirection={['columnn','row']} height={'100%'} justifyContent={'center'} alignItems={'center'} >
+                <Heading width={['100%','40%']} fontSize={['40px','100px']} fontFamily={'Skranji'} color={'black'} fontWeight={'medium'}>Event Calendar</Heading>
+                <VStack width={['100%','60%']} height={'80vh'} overflowY={'scroll'}>
                     <Card
                         direction={{ base: 'column', sm: 'row' }}
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -63,7 +62,7 @@ const Calendar = () => {
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -94,7 +93,7 @@ const Calendar = () => {
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -125,7 +124,7 @@ const Calendar = () => {
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -156,7 +155,7 @@ const Calendar = () => {
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -187,7 +186,7 @@ const Calendar = () => {
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -218,7 +217,7 @@ const Calendar = () => {
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -249,7 +248,7 @@ const Calendar = () => {
                         overflow='hidden'
                         variant='outline'
                         width={'100%'}
-                        minHeight={'200px'}
+                        minHeight={['500px','200px']}
                     >
                         <Image
                             objectFit='cover'
@@ -275,10 +274,8 @@ const Calendar = () => {
                             </CardFooter>
                         </Stack>
                     </Card>
-                    
-                    
                 </VStack>
-            </HStack>
+            </Stack>
         </Box>
 
         </>

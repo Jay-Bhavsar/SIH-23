@@ -1,11 +1,10 @@
 import {
   Box,
   Button,
+  ButtonGroup,
   HStack,
-  Heading,
   Input,
   InputGroup,
-  InputLeftAddon,
   Select,
   Stack,
   Text,
@@ -33,8 +32,10 @@ const AddCourses = () => {
           alignItems={"center"}
           // margin={'auto'}
         >
-          <VStack width={"25%"}>
-            <FaLaptopCode widsth fontSize={"300px"} color="white" />
+          <VStack display={["none", "flex"]} width={["80%", "25%"]}>
+            <Text fontSize={["100px", "300px"]}>
+              <FaLaptopCode color="white" />
+            </Text>
             <Text
               color={"whiteAlpha.900"}
               fontSize={"40px"}
@@ -50,7 +51,7 @@ const AddCourses = () => {
               Add a new Course
             </Text>
           </VStack>
-          <VStack width={"70%"}>
+          <VStack width={['90%',"70%"]}>
             <Stack spacing={4}>
               <HStack>
                 <Input
@@ -60,22 +61,22 @@ const AddCourses = () => {
                   size="md"
                 />
               </HStack>
-                <Text fontFamily={'montserrat'}>Thumbnail Profile</Text>
-                <input
-                  type="file"
-                  placeholder="Select your avatar"
-                  className="file-input file-input-bordered file-input-warning w-full max-w-xs"
-                />
+              <Text fontFamily={"montserrat"}>Thumbnail Profile</Text>
+              <input
+                type="file"
+                placeholder="Select your avatar"
+                className="file-input file-input-bordered file-input-warning w-full max-w-xs"
+              />
               <Input
                 variant={"filled"}
                 _placeholder={{ color: "black" }}
                 placeholder="Name of Creator"
                 size="md"
               />
-              <InputGroup>
+              <ButtonGroup spacing={'5'}>
                 <Input variant={"filled"} placeholder="Price of Course" />
                 <Input variant={"filled"} placeholder="Number of Lectures" />
-              </InputGroup>
+              </ButtonGroup>
               <Multiselect
                 isObject={false}
                 onRemove={(event) => {
