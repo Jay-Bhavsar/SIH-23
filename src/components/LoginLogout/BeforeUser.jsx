@@ -3,17 +3,13 @@ import {
   Button,
   HStack,
   Input,
-  InputGroup,
-  InputLeftAddon,
-  Select,
   Stack,
   Text,
-  Textarea,
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useUserAuth } from "../../context/UserAuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IoIosRocket } from "react-icons/io";
 
 const BeforeUser = () => {
