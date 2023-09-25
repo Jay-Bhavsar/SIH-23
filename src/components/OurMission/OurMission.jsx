@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Heading, Image, Stack, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { AiFillEye } from 'react-icons/ai';
 import { IoIosRocket } from 'react-icons/io';
@@ -8,7 +8,7 @@ const OurMission = () => {
     <>
       <Box width={'100%'} minHeight={'100vh'}>
         <Box
-          width={'80%'}
+          width={['90%','80%']}
           minHeight={'100vh'}
           margin={'auto'}
           display={'flex'}
@@ -16,8 +16,8 @@ const OurMission = () => {
           alignItems={'center'}
           flexDir={'column'}
         >
-          <HStack>
-            <VStack width={'60%'} margin={'auto'}>
+          <Stack direction={['column-reverse','row']}>
+            <VStack width={['100%','60%']} margin={'auto'}>
               <Box
                 padding={'20px'}
                 boxShadow={'0px 10px 61px 26px rgba(0,0,0,0.1)'}
@@ -35,19 +35,7 @@ const OurMission = () => {
                   fontFamily={'montserrat'}
                   textAlign={'justify'}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore ea enim facere reprehenderit, voluptas optio placeat
-                  ullam similique itaque saepe magnam suscipit corporis harum
-                  doloremque perspiciatis? Omnis tempora saepe, animi
-                  consectetur ex, itaque corporis natus asperiores repudiandae,
-                  at voluptatem cupiditate quo accusamus nisi atque aspernatur
-                  corrupti laboriosam blanditiis? Et maxime totam sed similique,
-                  rem quasi ratione optio vel. Sit eos maxime quis, perspiciatis
-                  porro quas dolorum ex vero similique aliquid, quasi dolore
-                  quam consequatur! Tempore, dolor nesciunt. Itaque, tenetur?
-                  Soluta autem ut incidunt impedit neque quis, mollitia eum
-                  tempore voluptas sequi excepturi rem quam omnis aut facere,
-                  quasi ipsum voluptate!
+                  To be a pioneering force in reshaping the employment landscape through cutting-edge technology, envisioning a future where job seekers effortlessly access, connect with, and thrive in suitable career opportunities tailored to their location and skills. PGRKAM aims to empower candidates with real-time, geospatially precise job notifications via Augmented Reality (AR) and Global Positioning System (GPS) integration. By harnessing the power of Machine Learning (ML) and Data Science, we aspire to provide personalized recommendations, revolutionizing the way individuals discover and pursue meaningful employment, ultimately contributing to professional growth and economic prosperity.
                 </Text>
               </Box>
               <Box
@@ -68,26 +56,14 @@ const OurMission = () => {
                   fontFamily={'montserrat'}
                   textAlign={'justify'}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore ea enim facere reprehenderit, voluptas optio placeat
-                  ullam similique itaque saepe magnam suscipit corporis harum
-                  doloremque perspiciatis? Omnis tempora saepe, animi
-                  consectetur ex, itaque corporis natus asperiores repudiandae,
-                  at voluptatem cupiditate quo accusamus nisi atque aspernatur
-                  corrupti laboriosam blanditiis? Et maxime totam sed similique,
-                  rem quasi ratione optio vel. Sit eos maxime quis, perspiciatis
-                  porro quas dolorum ex vero similique aliquid, quasi dolore
-                  quam consequatur! Tempore, dolor nesciunt. Itaque, tenetur?
-                  Soluta autem ut incidunt impedit neque quis, mollitia eum
-                  tempore voluptas sequi excepturi rem quam omnis aut facere,
-                  quasi ipsum voluptate!
+                 Our mission is to provide prospective candidates with a state-of-the-art employment data platform through the PGRKAM web application. We are dedicated to delivering real-time, geospatially accurate job notifications using Augmented Reality (AR) and Global Positioning System (GPS) technologies. We strive to connect job seekers with employers and skill development initiatives effortlessly while offering personalized recommendations through Machine Learning (ML) and Data Science. Our goal is to enhance user experiences, foster professional growth, and ensure that every candidate can find their ideal job within their geographical area.
                 </Text>
               </Box>
             </VStack>
-            <Box width={'40%'} >
+            <Box margin={'auto'} marginTop={'100px'} width={['100%','40%']} >
               <Image width={'90%'} src={mission} />
             </Box>
-          </HStack>
+          </Stack>
           <Box></Box>
         </Box>
       </Box>

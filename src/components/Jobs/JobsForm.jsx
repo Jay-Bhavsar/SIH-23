@@ -63,17 +63,20 @@ const JobsForm = () => {
     <>
       {showForm ? (
         <>
-          <Box className="userReg" width={"100vw"} height={"100vh"}>
-            <HStack
+          <Box className="userReg" width={"100vw"} minHeight={"100vh"}>
+            <Stack
               width={"100vw"}
-              height={"100vh"}
+              minheight={"70vh"}
               display={"flex"}
               justifyContent={"center"}
               alignItems={"center"}
+              direction={["column", "row"]}
               // margin={'auto'}
             >
-              <VStack width={"25%"}>
-                <IoIosDocument widsth fontSize={"300px"} color="white" />
+              <VStack display={['none','flex']} width={["80%", "25%"]}  marginTop={["500px", "1px"]}>
+                <Text fontSize={['100px','300px']}>
+                  <IoIosDocument color="white" />
+                </Text>
                 <Text
                   color={"whiteAlpha.900"}
                   fontSize={"40px"}
@@ -81,14 +84,14 @@ const JobsForm = () => {
                 >
                   Add a New Job
                 </Text>
-                <Text
-                  fontSize={"20px"}
-                  color={"whiteAlpha.900"}
-                  textAlign={"center"}
-                ></Text>
               </VStack>
-              <VStack width={"70%"} >
-                <Stack spacing={4} overflowX={"scroll"} minHeight={'100vh'} marginTop={'150px'}>
+              <VStack width={["90%", "75%"]} minHeight={'100vh'} >
+                <Stack
+                  spacing={4}
+                  overflowX={"scroll"}
+                  minHeight={"100vh"}
+                  marginTop={['100px',"150px"]}
+                >
                   <Input
                     value={job.jobName}
                     onChange={(e) =>
@@ -99,7 +102,10 @@ const JobsForm = () => {
                     placeholder="Job Role"
                     size="md"
                   />
-                  <input type="file" className="file-input file-input-bordered file-input-warning w-full max-w-xs" />
+                  <input
+                    type="file"
+                    className="file-input file-input-bordered file-input-warning w-full max-w-xs"
+                  />
                   <Input
                     value={job.lastDate}
                     onChange={(e) =>
@@ -194,12 +200,12 @@ const JobsForm = () => {
                   </Button>
                 </Stack>
               </VStack>
-            </HStack>
+            </Stack>
           </Box>
         </>
       ) : (
         <>
-          <Box className="userReg" width={"100vw"} minHeight={"120vh"}>
+          <Box className="userReg" width={"100vw"} minHeight={"100vh"}>
             <HStack
               width={"100vw"}
               height={"100vh"}
@@ -209,7 +215,7 @@ const JobsForm = () => {
               // margin={'auto'}
             >
               <VStack width={"25%"}>
-                <IoIosDocument widsth fontSize={"300px"} color="white" />
+                <IoIosDocument fontSize={"300px"} color="white" />
                 <Text
                   color={"whiteAlpha.900"}
                   fontSize={"40px"}

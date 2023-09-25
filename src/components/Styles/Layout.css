@@ -1,6 +1,5 @@
 *{
     font-family: 'Andika', sans-serif;
-    /* font-family: 'Montserrat', sans-serif; */
 }
 .hero {
     background-size: cover;
@@ -16,12 +15,9 @@
     top: 0;
     height: 100%;
     width: 100%;
-    /* background-color: #FF7722; */
     background-color: rgb(204, 95, 27);
     opacity: 0.9;
     z-index: -1;
-    clip-path: polygon(41% 0, 100% 0, 100% 100%, 68% 100%);
-    clip-path: polygon(51% 0, 100% 0, 100% 100%, 78% 100%);
     clip-path: polygon(51% 0, 100% 0, 100% 84%, 76% 84%);
 }
 .bgmaker {
@@ -38,12 +34,9 @@
     top: 0;
     height: 100%;
     width: 100%;
-    /* background-color: #FF7722; */
     background-color: #ff9933;
     opacity: 0.9;
     z-index: -1;
-    clip-path: polygon(0 0, 39% 0, 39% 11%, 21% 11%, 34% 44%, 0 100%);
-    clip-path: polygon(0 0, 0% 100%, 41% 50%);
     clip-path: polygon(0 0, 100% 0, 100% 30%, 37% 30%, 37% 70%, 0 70%, 0% 70%, 0% 30%);
     
 }
@@ -61,7 +54,6 @@
     top: 0;
     height: 100%;
     width: 100%;
-    /* background-color: #FF7722; */
     background-color: #ff9933;
     z-index: -1;
     clip-path: polygon(0 0, 23% 0, 0 28%, 0 83%, 50% 100%, 142% 74%, 100% 100%, 0 100%);;
@@ -86,10 +78,26 @@
     top: 0;
     height: 100%;
     width: 100%;
-    /* background-color: #FF7722; */
-    /* background-color: blue; */
     background-image: linear-gradient(to bottom, #ff9933, #c9663c, #883f38, #452226, #000000);
     z-index: -1;
     clip-path: polygon(100% 0, 100% 0, 35% 0, 35% 100%, 100% 100%, 100% 100%, 48% 100%, 0 100%, 0 0);
   }
   
+  @media (max-width: 480px){
+    .hero::after {
+        clip-path: polygon(0 47%, 100% 47%, 100% 100%, 0% 100%);
+    }
+    .testi {
+        position: relative;
+    }
+    
+    .testi::after {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    .boxdesign{
+        max-width: 100%;
+    }
+    .userReg::after {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+      }
+  }

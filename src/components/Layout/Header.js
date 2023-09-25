@@ -83,8 +83,8 @@ const Header = () => {
               </Link>
               <HStack
                 justifyContent={'space-evenly'}
-                position="absolute"
-                bottom={'2rem'}
+                position={"absolute"}
+                bottom={['10rem','2rem']}
                 width="80%"
               >
                 {sessionVariable ? (
@@ -105,7 +105,6 @@ const Header = () => {
                             <RiDashboardFill style={{ margin: '4px' }} />
                             DashBoard
                           </Button>
-                          {/* <Button variant={'ghost'} colorScheme={'yellow'}>Profile</Button> */}
                         </Link>
                       )}
                     </VStack>
