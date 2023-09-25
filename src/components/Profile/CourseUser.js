@@ -15,7 +15,7 @@ const Course = ({ title, imageScr, id, creator, description }) => {
 
     return (
         <VStack
-            minWidth={"40%"}
+            minWidth={['80%',"40%"]}
             className="course"
             alignItems={["center", "flex-start"]}
             boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.1) "}
