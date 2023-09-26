@@ -12,7 +12,7 @@ import {
   Textarea,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IoIosRocket } from "react-icons/io";
@@ -35,15 +35,18 @@ const OrgReg = () => {
   const [user, setUser] = useState({ ...template });
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const [userLocation, setUserLocation] = useState({});
   const regCompany = () => {
     setIsLoading(true);
     const uid = sessionStorage.getItem("uid");
+    
     const temp = {
       ...user,
       uid: uid,
       numberOfEmployees: user.numberOfEmployees,
       categoryOfCompany: user.categoryOfCompany,
       userType: "company",
+      coordinates:userLocation,
     };
     fetch("https://sih23-backend.vercel.app/register", {
       method: "POST",
@@ -66,6 +69,22 @@ const OrgReg = () => {
         console.log(err.message);
       });
   };
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setUserLocation({ latitude, longitude });
+        },
+        (error) => {
+          console.error("Error getting user location:", error);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  }, [])
+  
   return (
     <>
       <Box className="userReg" width={"100vw"} height={"100vh"}>
@@ -77,7 +96,7 @@ const OrgReg = () => {
           alignItems={"center"}
           // margin={'auto'}
         >
-          <VStack width={"25%"} display={['flex','block']}>
+          <VStack width={"25%"} display={["flex", "block"]}>
             <IoIosRocket widsth fontSize={"300px"} color="white" />
             <Text
               color={"whiteAlpha.900"}
@@ -102,7 +121,7 @@ const OrgReg = () => {
               organization !!
             </Text>
           </VStack>
-          <VStack width={['100%',"70%"]}>
+          <VStack width={["100%", "70%"]}>
             <Stack marginTop={"50px"} spacing={4} overflowX={"scroll"}>
               <HStack>
                 <Input

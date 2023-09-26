@@ -29,6 +29,7 @@ import AddCourses from "./components/Courses/AddCourses";
 import BeforeUser from "./components/LoginLogout/BeforeUser";
 import BeforeOrg from "./components/LoginLogout/BeforeOrg";
 import Profile from "./components/Profile/Profile";
+import Location from "./components/Jobs/Location";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
               <Route exact path="/authuser" element={<ProtectedRoute><BeforeUser /></ProtectedRoute>}/>
               <Route exact path="/authorg" element={<ProtectedRoute><BeforeOrg /></ProtectedRoute>} />
               <Route exact path="/profile" element={<Profile />} />
+              <Route exact path="/location" element={<Location />} />
 
               <Route
                 path="/user"

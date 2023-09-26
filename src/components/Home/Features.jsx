@@ -11,7 +11,13 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
-
+import gf1 from '../Assets/img/AR.gif'
+import gf2 from '../Assets/img/Ai Recommendation.gif'
+import gf3 from '../Assets/img/Auto Resume Parsing.gif'
+import gf4 from '../Assets/img/Counselling.gif'
+import gf5 from '../Assets/img/GPS.gif'
+import gf6 from '../Assets/img/JobNotification.gif'
+import gf7 from '../Assets/img/Skill.gif'
 const Features = () => {
   return (
     <>
@@ -38,7 +44,7 @@ const Features = () => {
             <Image
               objectFit="cover"
               maxW={{ base: '100%', sm: '300px' }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+              src={gf6}
               alt="Caffe Latte"
             />
 
@@ -77,7 +83,7 @@ const Features = () => {
             <Image
               objectFit="cover"
               maxW={{ base: '100%', sm: '300px' }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+              src={gf7}
               alt="Caffe Latte"
             />
 
@@ -118,7 +124,7 @@ const Features = () => {
             <Image
               objectFit="cover"
               maxW={{ base: '100%', sm: '300px' }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+              src={gf4}
               alt="Caffe Latte"
             />
 
@@ -157,7 +163,7 @@ const Features = () => {
             <Image
               objectFit="cover"
               maxW={{ base: '100%', sm: '300px' }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+              src={gf5}
               alt="Caffe Latte"
             />
 
@@ -196,7 +202,7 @@ const Features = () => {
             <Image
               objectFit="cover"
               maxW={{ base: '100%', sm: '300px' }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+              src={gf2}
               alt="Caffe Latte"
             />
 
@@ -236,7 +242,7 @@ const Features = () => {
             <Image
               objectFit="cover"
               maxW={{ base: '100%', sm: '300px' }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+              src={gf3}
               alt="Caffe Latte"
             />
 
@@ -275,7 +281,7 @@ const Features = () => {
             <Image
               objectFit="cover"
               maxW={{ base: '100%', sm: '300px' }}
-              src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
+              src={gf1}
               alt="Caffe Latte"
             />
 

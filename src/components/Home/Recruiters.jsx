@@ -4,6 +4,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Box, Divider, HStack, Image, Text } from "@chakra-ui/react";
 import { Card, CardBody } from "@chakra-ui/react";
+import c1 from '../Assets/img/c1.png'
+import c2 from '../Assets/img/c2.png'
+import c3 from '../Assets/img/c3.png'
+import c4 from '../Assets/img/c4.png'
+import c5 from '../Assets/img/c5.png'
+import c6 from '../Assets/img/c6.png'
+import c7 from '../Assets/img/c7.png'
 const Recruiters = () => {
   return (
     <>
@@ -23,9 +30,10 @@ const Recruiters = () => {
             <Card variant="filled" maxW="sm">
               <CardBody>
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={c1}
                   alt="Green double couch with wooden legs"
                   borderRadius="lg"
+                  width={'100%'}
                   
                 />
               </CardBody>
@@ -35,9 +43,10 @@ const Recruiters = () => {
             <Card variant="filled" maxW="sm">
               <CardBody>
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={c2}
                   alt="Green double couch with wooden legs"
                   borderRadius="lg"
+                  width={'100%'}
                 />
               </CardBody>
             </Card>
@@ -46,9 +55,10 @@ const Recruiters = () => {
             <Card variant="filled" maxW="sm">
               <CardBody>
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  alt="Green double couch with wooden legs"
+                  src={c3}
                   borderRadius="lg"
+                  width={'50%'}
+                  align={'center'}
                 />
               </CardBody>
             </Card>
@@ -57,9 +67,10 @@ const Recruiters = () => {
             <Card variant="filled" maxW="sm">
               <CardBody>
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={c4}
                   alt="Green double couch with wooden legs"
                   borderRadius="lg"
+                  width={'100%'}
                 />
               </CardBody>
             </Card>
@@ -68,9 +79,10 @@ const Recruiters = () => {
             <Card variant="filled" maxW="sm">
               <CardBody>
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={c5}
                   alt="Green double couch with wooden legs"
                   borderRadius="lg"
+                  width={'100%'}
                 />
               </CardBody>
             </Card>
@@ -79,9 +91,22 @@ const Recruiters = () => {
             <Card variant="filled" maxW="sm">
               <CardBody>
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={c6}
                   alt="Green double couch with wooden legs"
                   borderRadius="lg"
+                  width={'100%'}
+                />
+              </CardBody>
+            </Card>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card variant="filled" maxW="sm">
+              <CardBody>
+                <Image
+                  src={c7}
+                  alt="Green double couch with wooden legs"
+                  borderRadius="lg"
+                  width={'100%'}
                 />
               </CardBody>
             </Card>

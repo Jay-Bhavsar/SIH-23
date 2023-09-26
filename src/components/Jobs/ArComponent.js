@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Camera from "react-camera-photo";
+import { Box, Button } from "@chakra-ui/react";
 
 const ARComponent = () => {
   const [cameraAccess, setCameraAccess] = useState(false);
@@ -145,11 +146,11 @@ const ARComponent = () => {
   }, [capturedPhoto]);
 
   return (
-    <div>
+    <Box width={'100%'} height={'100%'} >
       {!cameraAccess ? (
-        <button onClick={askCameraPermission}>Access Camera</button>
+        <Button colorScheme="orange" onClick={askCameraPermission}>Access Camera</Button>
       ) : (
-        <div>
+        <Box>
           {cameraVisible ? (
             <div>
               <h2>Camera View:</h2>
@@ -163,10 +164,10 @@ const ARComponent = () => {
           ) : (
             <div>
               {showNearbyJobs && (
-                <div>
-                  <button onClick={checkNearbyLocations}>
+                <Box>
+                  <Button onClick={checkNearbyLocations}>
                     Check Nearby Jobs:
-                  </button>
+                  </Button>
                   <ul>
                     {nearbyLocations.map((location, index) => (
                       <li key={index}>
@@ -175,11 +176,11 @@ const ARComponent = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </Box>
               )}
             </div>
           )}
-        </div>
+        </Box>
       )}
       {capturedPhoto && (
         <div>
@@ -192,7 +193,7 @@ const ARComponent = () => {
         </div>
       )}
       <ToastContainer />
-    </div>
+    </Box>
   );
 };
 
