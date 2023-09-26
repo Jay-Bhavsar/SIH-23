@@ -1,6 +1,8 @@
 import { Avatar, Box, HStack, Heading, Image, Stack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
-// import user1 from '../Assets/img/'
+import user1 from '../Assets/img/pro1.png'
+import user2 from '../Assets/img/pro2.png'
+import user3 from '../Assets/img/pro3.png'
 const Testimonials = () => {
     return (
         <>
@@ -14,7 +16,7 @@ const Testimonials = () => {
                     <Stack width={"100%"} marginY={'50px'} direction={['column','row']}>
                         <Box width={['100%','30%']} margin={'auto'} className='boxdesign' paddingX={'30px'} paddingY={'20px'} borderRadius={'10px'} boxShadow={'0px 10px 61px 26px rgba(0,0,0,0.1)'}>
                             <HStack marginBottom={'15px'}>
-                                <Avatar size={'xl'} name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+                                <Avatar size={'xl'} name='Dan Abrahmov' src={user1} />
                                 <VStack spacing={'0'} >
                                     <Text textAlign={'start'} fontSize={'30px'} fontWeight={'bold'} fontFamily={'roboto'}>Jack Joseph</Text>
                                     <Text textAlign={'start'} fontSize={'14px'} fontWeight={'light'} fontFamily={'montserrat'}>Recent Graduate</Text>
@@ -26,7 +28,7 @@ const Testimonials = () => {
                         </Box>
                         <Box width={['100%','30%']} margin={'auto'} className='boxdesign' paddingX={'30px'} paddingY={'20px'} borderRadius={'10px'} boxShadow={'0px 10px 61px 26px rgba(0,0,0,0.1)'}>
                             <HStack marginBottom={'15px'}>
-                                <Avatar size={'xl'} name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+                                <Avatar size={'xl'} name='Dan Abrahmov' src={user2} />
                                 <VStack spacing={'0'} >
                                     <Text textAlign={'start'} fontSize={'30px'} fontWeight={'bold'} fontFamily={'roboto'}>Sumina Sen</Text>
                                     <Text textAlign={'start'} fontSize={'14px'} fontWeight={'light'} fontFamily={'montserrat'}>College Student</Text>
@@ -38,7 +40,7 @@ const Testimonials = () => {
                         </Box>
                         <Box width={['100%','30%']} margin={'auto'} className='boxdesign' paddingX={'30px'} paddingY={'20px'} borderRadius={'10px'} boxShadow={'0px 10px 61px 26px rgba(0,0,0,0.1)'}>
                             <HStack marginBottom={'15px'}>
-                                <Avatar size={'xl'} name='Dan Abrahmov' src='https://bit.ly/dan-abramov' />
+                                <Avatar size={'xl'} name='Dan Abrahmov' src={user3} />
                                 <VStack spacing={'0'} >
                                     <Text textAlign={'start'} fontSize={'30px'} fontWeight={'bold'} fontFamily={'roboto'}>Mukesh Gehlot</Text>
                                     <Text textAlign={'start'} fontSize={'14px'} fontWeight={'light'} fontFamily={'montserrat'}>Experienced Professional</Text>
